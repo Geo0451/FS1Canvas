@@ -1,9 +1,18 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.FS1Replay" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+<resources>
+    <style name="Theme.FS1" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">#0D0B14</item>
+        <item name="android:statusBarColor">#0D0B14</item>
+        <item name="android:navigationBarColor">#0D0B14</item>
+        <item name="android:textColorPrimary">#ECE8F5</item>
+        <item name="colorAccent">#8E73F0</item>
+        <item name="alertDialogTheme">@style/FS1Dialog</item>
     </style>
 
-    <style name="Theme.FS1Replay" parent="Base.Theme.FS1Replay" />
+    <style name="FS1Dialog" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/dialog_bg</item>
+        <item name="android:textColorPrimary">#ECE8F5</item>
+        <item name="android:textColor">#ECE8F5</item>
+        <item name="colorAccent">#8E73F0</item>
+        <item name="colorControlActivated">#8E73F0</item>
+    </style>
 </resources>
