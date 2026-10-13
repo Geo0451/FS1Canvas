@@ -9,29 +9,29 @@
 9        android:targetSdkVersion="34" />
 10
 11    <uses-feature
-11-->/home/g_kj/Downloads/FS1Replay/app/src/main/AndroidManifest.xml:4:5-90
+11-->/home/g_kj/fastrack/revFS1/FS1Replay/app/src/main/AndroidManifest.xml:4:5-90
 12        android:name="android.hardware.bluetooth_le"
-12-->/home/g_kj/Downloads/FS1Replay/app/src/main/AndroidManifest.xml:4:19-63
+12-->/home/g_kj/fastrack/revFS1/FS1Replay/app/src/main/AndroidManifest.xml:4:19-63
 13        android:required="true" />
-13-->/home/g_kj/Downloads/FS1Replay/app/src/main/AndroidManifest.xml:4:64-87
+13-->/home/g_kj/fastrack/revFS1/FS1Replay/app/src/main/AndroidManifest.xml:4:64-87
 14
 15    <!-- Android 12+ -->
 16    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
-16-->/home/g_kj/Downloads/FS1Replay/app/src/main/AndroidManifest.xml:7:5-76
-16-->/home/g_kj/Downloads/FS1Replay/app/src/main/AndroidManifest.xml:7:22-73
+16-->/home/g_kj/fastrack/revFS1/FS1Replay/app/src/main/AndroidManifest.xml:7:5-76
+16-->/home/g_kj/fastrack/revFS1/FS1Replay/app/src/main/AndroidManifest.xml:7:22-73
 17    <!-- Android 10-11 -->
 18    <uses-permission
-18-->/home/g_kj/Downloads/FS1Replay/app/src/main/AndroidManifest.xml:9:5-95
+18-->/home/g_kj/fastrack/revFS1/FS1Replay/app/src/main/AndroidManifest.xml:9:5-95
 19        android:name="android.permission.BLUETOOTH"
-19-->/home/g_kj/Downloads/FS1Replay/app/src/main/AndroidManifest.xml:9:22-65
+19-->/home/g_kj/fastrack/revFS1/FS1Replay/app/src/main/AndroidManifest.xml:9:22-65
 20        android:maxSdkVersion="30" />
-20-->/home/g_kj/Downloads/FS1Replay/app/src/main/AndroidManifest.xml:9:66-92
+20-->/home/g_kj/fastrack/revFS1/FS1Replay/app/src/main/AndroidManifest.xml:9:66-92
 21    <uses-permission
-21-->/home/g_kj/Downloads/FS1Replay/app/src/main/AndroidManifest.xml:10:5-101
+21-->/home/g_kj/fastrack/revFS1/FS1Replay/app/src/main/AndroidManifest.xml:10:5-101
 22        android:name="android.permission.BLUETOOTH_ADMIN"
-22-->/home/g_kj/Downloads/FS1Replay/app/src/main/AndroidManifest.xml:10:22-71
+22-->/home/g_kj/fastrack/revFS1/FS1Replay/app/src/main/AndroidManifest.xml:10:22-71
 23        android:maxSdkVersion="30" />
-23-->/home/g_kj/Downloads/FS1Replay/app/src/main/AndroidManifest.xml:10:72-98
+23-->/home/g_kj/fastrack/revFS1/FS1Replay/app/src/main/AndroidManifest.xml:10:72-98
 24
 25    <permission
 25-->[androidx.core:core:1.13.1] /home/g_kj/.gradle/caches/transforms-4/8e0a0bff2d388b6446750efdf4a5758f/transformed/core-1.13.1/AndroidManifest.xml:22:5-24:47
@@ -45,42 +45,42 @@
 29-->[androidx.core:core:1.13.1] /home/g_kj/.gradle/caches/transforms-4/8e0a0bff2d388b6446750efdf4a5758f/transformed/core-1.13.1/AndroidManifest.xml:26:22-94
 30
 31    <application
-31-->/home/g_kj/Downloads/FS1Replay/app/src/main/AndroidManifest.xml:12:5-29:19
+31-->/home/g_kj/fastrack/revFS1/FS1Replay/app/src/main/AndroidManifest.xml:12:5-29:19
 32        android:allowBackup="false"
-32-->/home/g_kj/Downloads/FS1Replay/app/src/main/AndroidManifest.xml:17:9-36
+32-->/home/g_kj/fastrack/revFS1/FS1Replay/app/src/main/AndroidManifest.xml:17:9-36
 33        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 33-->[androidx.core:core:1.13.1] /home/g_kj/.gradle/caches/transforms-4/8e0a0bff2d388b6446750efdf4a5758f/transformed/core-1.13.1/AndroidManifest.xml:28:18-86
 34        android:debuggable="true"
 35        android:extractNativeLibs="false"
 36        android:icon="@mipmap/ic_launcher"
-36-->/home/g_kj/Downloads/FS1Replay/app/src/main/AndroidManifest.xml:13:9-43
+36-->/home/g_kj/fastrack/revFS1/FS1Replay/app/src/main/AndroidManifest.xml:13:9-43
 37        android:label="@string/app_name"
-37-->/home/g_kj/Downloads/FS1Replay/app/src/main/AndroidManifest.xml:15:9-41
+37-->/home/g_kj/fastrack/revFS1/FS1Replay/app/src/main/AndroidManifest.xml:15:9-41
 38        android:roundIcon="@mipmap/ic_launcher_round"
-38-->/home/g_kj/Downloads/FS1Replay/app/src/main/AndroidManifest.xml:14:9-54
+38-->/home/g_kj/fastrack/revFS1/FS1Replay/app/src/main/AndroidManifest.xml:14:9-54
 39        android:supportsRtl="true"
-39-->/home/g_kj/Downloads/FS1Replay/app/src/main/AndroidManifest.xml:18:9-35
+39-->/home/g_kj/fastrack/revFS1/FS1Replay/app/src/main/AndroidManifest.xml:18:9-35
 40        android:theme="@style/Theme.FS1" >
-40-->/home/g_kj/Downloads/FS1Replay/app/src/main/AndroidManifest.xml:16:9-41
+40-->/home/g_kj/fastrack/revFS1/FS1Replay/app/src/main/AndroidManifest.xml:16:9-41
 41        <activity
-41-->/home/g_kj/Downloads/FS1Replay/app/src/main/AndroidManifest.xml:19:9-28:20
+41-->/home/g_kj/fastrack/revFS1/FS1Replay/app/src/main/AndroidManifest.xml:19:9-28:20
 42            android:name="com.fs1.replay.MainActivity"
-42-->/home/g_kj/Downloads/FS1Replay/app/src/main/AndroidManifest.xml:20:13-41
+42-->/home/g_kj/fastrack/revFS1/FS1Replay/app/src/main/AndroidManifest.xml:20:13-41
 43            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
-43-->/home/g_kj/Downloads/FS1Replay/app/src/main/AndroidManifest.xml:22:13-106
+43-->/home/g_kj/fastrack/revFS1/FS1Replay/app/src/main/AndroidManifest.xml:22:13-106
 44            android:exported="true"
-44-->/home/g_kj/Downloads/FS1Replay/app/src/main/AndroidManifest.xml:21:13-36
+44-->/home/g_kj/fastrack/revFS1/FS1Replay/app/src/main/AndroidManifest.xml:21:13-36
 45            android:windowSoftInputMode="adjustResize" >
-45-->/home/g_kj/Downloads/FS1Replay/app/src/main/AndroidManifest.xml:23:13-55
+45-->/home/g_kj/fastrack/revFS1/FS1Replay/app/src/main/AndroidManifest.xml:23:13-55
 46            <intent-filter>
-46-->/home/g_kj/Downloads/FS1Replay/app/src/main/AndroidManifest.xml:24:13-27:29
+46-->/home/g_kj/fastrack/revFS1/FS1Replay/app/src/main/AndroidManifest.xml:24:13-27:29
 47                <action android:name="android.intent.action.MAIN" />
-47-->/home/g_kj/Downloads/FS1Replay/app/src/main/AndroidManifest.xml:25:17-69
-47-->/home/g_kj/Downloads/FS1Replay/app/src/main/AndroidManifest.xml:25:25-66
+47-->/home/g_kj/fastrack/revFS1/FS1Replay/app/src/main/AndroidManifest.xml:25:17-69
+47-->/home/g_kj/fastrack/revFS1/FS1Replay/app/src/main/AndroidManifest.xml:25:25-66
 48
 49                <category android:name="android.intent.category.LAUNCHER" />
-49-->/home/g_kj/Downloads/FS1Replay/app/src/main/AndroidManifest.xml:26:17-77
-49-->/home/g_kj/Downloads/FS1Replay/app/src/main/AndroidManifest.xml:26:27-74
+49-->/home/g_kj/fastrack/revFS1/FS1Replay/app/src/main/AndroidManifest.xml:26:17-77
+49-->/home/g_kj/fastrack/revFS1/FS1Replay/app/src/main/AndroidManifest.xml:26:27-74
 50            </intent-filter>
 51        </activity>
 52
