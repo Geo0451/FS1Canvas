@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="ic_launcher_background">#0D0B14</color>
-    <string name="app_name">FS1Replay</string>
+    <string name="app_name">FS1Canvas</string>
     <style name="FS1Dialog" parent="Theme.AppCompat.Dialog.Alert">
         <item name="android:windowBackground">@drawable/dialog_bg</item>
         <item name="android:textColorPrimary">#ECE8F5</item>

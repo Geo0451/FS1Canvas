@@ -27,7 +27,6 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.webkit.WebViewAssetLoader
 import org.json.JSONArray
@@ -166,7 +165,32 @@ class MainActivity : AppCompatActivity(), WatchLink.Listener {
             } catch (e: Exception) { log("Save failed: ${e.message}", "err") }
         }
 
-        @JavascriptInterface fun connectWatch() = runOnUiThread { withBlePermissions { pickDevice() } }
+        /** The address the app will connect to (saved choice, or the built-in default). */
+        @JavascriptInterface fun getMac(): String = savedMac
+
+        /** Save [mac] and connect to it now. Validated here so a typo never reaches the BLE stack. */
+        @JavascriptInterface fun connectWatchTo(mac: String) = runOnUiThread {
+            val m = mac.trim().uppercase()
+            if (!Regex("([0-9A-F]{2}:){5}[0-9A-F]{2}").matches(m)) {
+                toast("That is not a valid Bluetooth address."); status("error", "Bad MAC address."); return@runOnUiThread
+            }
+            prefs.edit().putString("mac", m).apply()
+            withBlePermissions {
+                log("Connecting to $m…", "")
+                connectTo(m)
+            }
+        }
+
+        /** Asks for Bluetooth permission if needed, then hands the paired devices to the page (fs1.onPaired). */
+        @JavascriptInterface fun requestPairedDevices() = runOnUiThread {
+            withBlePermissions { js("fs1.onPaired(${JSONObject.quote(pairedJson())})") }
+        }
+
+        /** Removes a face the user kept. Bundled faces cannot be removed. */
+        @JavascriptInterface fun deleteTemplate(name: String): Boolean {
+            if (!validName(name)) return false
+            return try { File(userTemplateDir, name).delete() } catch (e: Exception) { false }
+        }
 
         @JavascriptInterface fun disconnectWatch() = runOnUiThread { link.close() }
 
@@ -224,24 +248,17 @@ class MainActivity : AppCompatActivity(), WatchLink.Listener {
         link.connect(dev); return true
     }
 
-    /** Dialog to view/change the watch MAC, then connect. */
-    private fun pickDevice() {
-        val input = android.widget.EditText(this).apply {
-            setText(savedMac); setSingleLine()
-            setTextColor(0xFFECE8F5.toInt()); setHintTextColor(0xFF6A6388.toInt())
-            backgroundTintList = android.content.res.ColorStateList.valueOf(0xFF8E73F0.toInt())
-            setPadding(48, 32, 48, 32)
-        }
-        AlertDialog.Builder(this)
-            .setTitle("Watch MAC address")
-            .setView(input)
-            .setPositiveButton("Connect") { _, _ ->
-                val mac = input.text.toString().trim().uppercase()
-                prefs.edit().putString("mac", mac).apply()
-                connectTo(mac)
+    /** Bonded (paired) Bluetooth devices as JSON [{name,address}], for the watch picker in the page. */
+    private fun pairedJson(): String {
+        val arr = JSONArray()
+        val adapter = (getSystemService(BLUETOOTH_SERVICE) as BluetoothManager).adapter
+        val bonded = adapter?.bondedDevices
+        if (bonded != null) {
+            bonded.sortedBy { it.name ?: "" }.forEach {
+                arr.put(JSONObject().put("name", it.name ?: "").put("address", it.address ?: ""))
             }
-            .setNegativeButton("Cancel") { _, _ -> pendingSend = null }
-            .show()
+        }
+        return arr.toString()
     }
 
     // ------------------------------------------------------------------ WatchLink.Listener (Kotlin -> page)

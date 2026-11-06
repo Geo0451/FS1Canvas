@@ -1,15 +1,19 @@
 [
     {
-        "merged": "com.fs1.replay.app-debug-24:/drawable_dialog_bg.xml.flat",
-        "source": "com.fs1.replay.app-main-26:/drawable/dialog_bg.xml"
+        "merged": "/home/g_kj/.gradle/daemon/8.7/com.fs1.replay.app-debug-24:/mipmap-xxxhdpi_ic_launcher_monochrome.png.flat",
+        "source": "/home/g_kj/.gradle/daemon/8.7/com.fs1.replay.app-main-26:/mipmap-xxxhdpi/ic_launcher_monochrome.png"
     },
     {
-        "merged": "com.fs1.replay.app-debug-24:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.fs1.replay.app-main-26:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "/home/g_kj/.gradle/daemon/8.7/com.fs1.replay.app-debug-24:/drawable_dialog_bg.xml.flat",
+        "source": "/home/g_kj/.gradle/daemon/8.7/com.fs1.replay.app-main-26:/drawable/dialog_bg.xml"
     },
     {
-        "merged": "com.fs1.replay.app-debug-24:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.fs1.replay.app-main-26:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "/home/g_kj/.gradle/daemon/8.7/com.fs1.replay.app-debug-24:/mipmap-hdpi_ic_launcher_monochrome.png.flat",
+        "source": "/home/g_kj/.gradle/daemon/8.7/com.fs1.replay.app-main-26:/mipmap-hdpi/ic_launcher_monochrome.png"
+    },
+    {
+        "merged": "/home/g_kj/.gradle/daemon/8.7/com.fs1.replay.app-debug-24:/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "/home/g_kj/.gradle/daemon/8.7/com.fs1.replay.app-main-26:/mipmap-hdpi/ic_launcher_foreground.png"
     },
     {
         "merged": "com.fs1.replay.app-debug-24:/mipmap-mdpi_ic_launcher_monochrome.png.flat",
@@ -28,12 +32,36 @@
         "source": "com.fs1.replay.app-main-26:/mipmap-xhdpi/ic_launcher_monochrome.png"
     },
     {
+        "merged": "/home/g_kj/.gradle/daemon/8.7/com.fs1.replay.app-debug-24:/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "/home/g_kj/.gradle/daemon/8.7/com.fs1.replay.app-main-26:/mipmap-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/home/g_kj/.gradle/daemon/8.7/com.fs1.replay.app-debug-24:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/home/g_kj/.gradle/daemon/8.7/com.fs1.replay.app-main-26:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/home/g_kj/.gradle/daemon/8.7/com.fs1.replay.app-debug-24:/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "/home/g_kj/.gradle/daemon/8.7/com.fs1.replay.app-main-26:/mipmap-mdpi/ic_launcher_foreground.png"
+    },
+    {
         "merged": "com.fs1.replay.app-debug-24:/mipmap-hdpi_ic_launcher_monochrome.png.flat",
         "source": "com.fs1.replay.app-main-26:/mipmap-hdpi/ic_launcher_monochrome.png"
     },
     {
         "merged": "com.fs1.replay.app-debug-24:/mipmap-xxhdpi_ic_launcher_monochrome.png.flat",
         "source": "com.fs1.replay.app-main-26:/mipmap-xxhdpi/ic_launcher_monochrome.png"
+    },
+    {
+        "merged": "/home/g_kj/.gradle/daemon/8.7/com.fs1.replay.app-debug-24:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/home/g_kj/.gradle/daemon/8.7/com.fs1.replay.app-main-26:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/home/g_kj/.gradle/daemon/8.7/com.fs1.replay.app-debug-24:/mipmap-mdpi_ic_launcher_monochrome.png.flat",
+        "source": "/home/g_kj/.gradle/daemon/8.7/com.fs1.replay.app-main-26:/mipmap-mdpi/ic_launcher_monochrome.png"
+    },
+    {
+        "merged": "/home/g_kj/.gradle/daemon/8.7/com.fs1.replay.app-debug-24:/mipmap-xxhdpi_ic_launcher_monochrome.png.flat",
+        "source": "/home/g_kj/.gradle/daemon/8.7/com.fs1.replay.app-main-26:/mipmap-xxhdpi/ic_launcher_monochrome.png"
     },
     {
         "merged": "com.fs1.replay.app-debug-24:/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
@@ -44,11 +72,23 @@
         "source": "com.fs1.replay.app-main-26:/mipmap-hdpi/ic_launcher_foreground.png"
     },
     {
+        "merged": "/home/g_kj/.gradle/daemon/8.7/com.fs1.replay.app-debug-24:/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "/home/g_kj/.gradle/daemon/8.7/com.fs1.replay.app-main-26:/mipmap-xhdpi/ic_launcher_foreground.png"
+    },
+    {
         "merged": "com.fs1.replay.app-debug-24:/mipmap-xxxhdpi_ic_launcher_monochrome.png.flat",
         "source": "com.fs1.replay.app-main-26:/mipmap-xxxhdpi/ic_launcher_monochrome.png"
     },
     {
         "merged": "com.fs1.replay.app-debug-24:/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
         "source": "com.fs1.replay.app-main-26:/mipmap-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/home/g_kj/.gradle/daemon/8.7/com.fs1.replay.app-debug-24:/mipmap-xhdpi_ic_launcher_monochrome.png.flat",
+        "source": "/home/g_kj/.gradle/daemon/8.7/com.fs1.replay.app-main-26:/mipmap-xhdpi/ic_launcher_monochrome.png"
+    },
+    {
+        "merged": "/home/g_kj/.gradle/daemon/8.7/com.fs1.replay.app-debug-24:/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "/home/g_kj/.gradle/daemon/8.7/com.fs1.replay.app-main-26:/mipmap-xxhdpi/ic_launcher_foreground.png"
     }
 ]

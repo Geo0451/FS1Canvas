@@ -3,6 +3,9 @@
 
     <uses-feature android:name="android.hardware.bluetooth_le" android:required="true" />
 
+    <!-- Small haptic taps in the editor -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
     <!-- Android 12+ -->
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
     <!-- Android 10-11 -->

@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FS1Replay</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#0D0B14">
+<title>FS1Canvas</title>
 <style>
   @font-face {
     font-family: 'IBM Plex Mono';
@@ -29,504 +30,421 @@
   @font-face{font-family:'Dela Gothic One';font-weight:100 900;src:url(data:font/woff2;base64,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) format('woff2');}
   @font-face{font-family:'Shojumaru';font-weight:100 900;src:url(data:font/woff2;base64,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) format('woff2');}
   :root{
-    --bg: #0D0B14;
-    --panel: #171325;
-    --panel-2: #1E1933;
-    --line: #2C2640;
-    --amber: #8E73F0;
-    --amber-dim: #5B4A9E;
-    --text: #ECE8F5;
-    --text-dim: #8B84A6;
-    --red: #d9695a;
-    --green: #7fae62;
-    --mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    --bg:#0D0B14; --panel:#171325; --panel-2:#1E1933; --line:#2C2640;
+    --amber:#8E73F0; --amber-dim:#5B4A9E; --orange:#F28A3C;
+    --text:#ECE8F5; --text-dim:#8B84A6; --red:#ff7b7b; --green:#6fdc8c;
+    --glow:rgba(142,115,240,.2);
+    --sans:system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+    --mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    color-scheme:dark;
   }
-  * { box-sizing: border-box; }
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: var(--mono);
-    margin: 0;
-    padding: 28px 20px 60px;
-    min-height: 100vh;
-  }
-  header { max-width: 1180px; margin: 0 auto 24px; }
-  h1 {
-    font-size: 20px;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    margin: 0 0 4px;
-    color: var(--amber);
-  }
-  header p { margin: 0; color: var(--text-dim); font-size: 13px; }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  [hidden]{display:none!important}
+  html,body{height:100%;margin:0;overflow:hidden;overscroll-behavior:none;-webkit-text-size-adjust:100%}
+  body{background:radial-gradient(900px 420px at 50% -80px,#241A44 0%,var(--bg) 70%) fixed;color:var(--text);
+    font-family:var(--sans);-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+  input,select{-webkit-user-select:text;user-select:text}
+  button{font:inherit;color:inherit;cursor:pointer;border:1px solid var(--line);border-radius:14px;
+    background:linear-gradient(180deg,#231D3A,#1B1630);padding:0;margin:0;transition:transform .08s,border-color .15s,background .15s}
+  button:active{transform:scale(.96)}
+  button:disabled{opacity:.38;pointer-events:none}
+  button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+  input[type=text],input[type=number]{-webkit-appearance:none;appearance:none;background:#0F0C1A;color:var(--text);
+    border:1px solid var(--line);border-radius:12px;padding:10px 12px;font:inherit;font-size:15px;outline:none;min-width:0}
+  input[type=text]:focus,input[type=number]:focus{border-color:var(--amber);box-shadow:0 0 0 3px var(--glow)}
+  ::placeholder{color:#6A6388}
+  ::-webkit-scrollbar{width:0;height:0}
 
-  main {
-    max-width: 1180px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 340px minmax(0, 1fr) 300px;
-    gap: 20px;
-    align-items: start;
-  }
-  main > * { min-width: 0; }
-  @media (max-width: 980px) { main { grid-template-columns: minmax(0, 1fr); } }
-  html { -webkit-text-size-adjust: 100%; overflow-x: hidden; }
+  /* ---------- shell ---------- */
+  .app{position:fixed;inset:0;max-width:600px;margin:0 auto;display:flex;flex-direction:column;
+    padding-top:env(safe-area-inset-top,0px)}
+  .appbar{flex:none;height:58px;display:flex;align-items:center;gap:10px;padding:0 8px 0 16px;position:relative}
+  .mark{flex:none;filter:drop-shadow(0 0 8px rgba(142,115,240,.55))}
+  .ttl{flex:1;min-width:0;display:flex;flex-direction:column;line-height:1.2;cursor:pointer}
+  .ttl b{font-size:18px;font-weight:700;letter-spacing:.01em}
+  #watch-status{font-size:12px;color:var(--text-dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  #watch-status.ok{color:var(--green)} #watch-status.err{color:var(--red)} #watch-status.busy{color:#FFB347}
+  .send{flex:none;height:42px;padding:0 20px;border-radius:21px;font-weight:700;font-size:15px;color:#1C0F05;
+    background:linear-gradient(180deg,#F7A04F,#EA7C2E);border-color:#F7A04F;box-shadow:0 4px 16px rgba(242,138,60,.3)}
+  .iconbtn{flex:none;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:transparent;border-color:transparent}
+  .iconbtn:active{background:#1E1933}
+  #send-progress{position:absolute;left:0;right:0;bottom:0;width:100%;height:3px;border:0;border-radius:0;
+    -webkit-appearance:none;appearance:none;background:transparent;opacity:0;transition:opacity .2s}
+  #send-progress.on{opacity:1}
+  #send-progress::-webkit-progress-bar{background:transparent}
+  #send-progress::-webkit-progress-value{background:linear-gradient(90deg,#EA7C2E,#F7A04F);transition:width .2s}
 
-  .panel {
-    background: var(--panel);
-    border: 1px solid var(--line);
-    border-radius: 6px;
-    padding: 16px;
-  }
-  .panel + .panel { margin-top: 20px; }
-  .panel h2 {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--text-dim);
-    margin: 0 0 12px;
-    font-weight: 600;
-  }
+  .main{flex:1;min-height:0;display:flex;flex-direction:column}
+  .stage-area{flex:1;min-height:0;display:flex;flex-direction:column}
+  .facebar{flex:none;display:flex;justify-content:center;padding:0 12px 2px}
+  .facechip{display:flex;align-items:center;gap:8px;height:36px;padding:0 14px 0 16px;border-radius:18px;font-size:14px;
+    font-weight:600;border-color:var(--amber-dim);background:#17122B;max-width:100%}
+  .facechip span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .stage-holder{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;padding:6px 14px 12px}
 
-  label.field { display:block; margin-bottom: 14px; }
-  label.field span.lbl {
-    display:block; font-size: 12px; color: var(--text-dim); margin-bottom: 5px;
-  }
-  input[type=file] {
-    width: 100%; font-size: 12px; color: var(--text-dim);
-    background: var(--panel-2); border: 1px dashed var(--line); border-radius: 4px; padding: 8px;
-  }
-  input[type=file]::file-selector-button {
-    background: #2A2340; color: var(--amber); border: 1px solid var(--line);
-    border-radius: 3px; padding: 5px 10px; font-family: var(--mono); font-size: 11px; margin-right: 10px;
-    cursor: pointer;
-  }
-  select {
-    width: 100%; background: var(--panel-2); color: var(--text); border: 1px solid var(--line);
-    border-radius: 4px; padding: 7px 8px; font-family: var(--mono); font-size: 13px;
-  }
-  .filestat { font-size: 11px; color: var(--green); margin-top: 4px; min-height: 14px; }
-  .filestat.empty { color: var(--text-dim); }
-  .filestat.err { color: var(--red); }
-
-  button {
-    font-family: var(--mono); font-size: 13px; font-weight: 600; cursor: pointer;
-    border-radius: 4px; border: 1px solid var(--line); padding: 10px 14px;
-    background: var(--panel-2); color: var(--text); width: 100%;
-  }
-  button.primary { background: var(--amber); color: #1C0F05; border-color: var(--amber); }
-  button.primary:hover { background: #F7A04F; }
-  button:hover { border-color: var(--amber-dim); }
-  button:disabled { opacity: 0.4; cursor: not-allowed; }
-  button + button { margin-top: 8px; }
-
-  /* --- canvas / workspace --- */
-  .stage-wrap { display:flex; flex-direction:column; align-items:center; gap: 10px; }
-  .stage-outer {
-    position: relative;
-    width: min(480px, 100%); height: auto;
-    aspect-ratio: 240 / 284;
-    background: #000;
-    border-radius: 26px;
-    border: 4px solid #2A2340;
-    overflow: hidden;
-    flex-shrink: 0;
-  }
-  canvas#bgCanvas { position:absolute; top:0; left:0; width:100%; height:100%; image-rendering: pixelated; }
-  .widget {
-    position: absolute;
-    border: 1.5px solid var(--amber);
-    background: rgba(142,115,240,0.14);
-    cursor: grab;
-    touch-action: none;
-    display:flex; align-items:center; justify-content:center;
-    font-size: 10px; color: var(--amber); user-select:none;
-    border-radius: 2px;
-  }
-  .widget:active { cursor: grabbing; background: rgba(142,115,240,0.3); z-index: 10; }
-  .widget .ico { font-size: 14px; }
-  .coordread { position:absolute; bottom:6px; right:8px; font-size:10px; color: rgba(236,232,245,0.55); }
-
-  table.wtable { width:100%; border-collapse: collapse; font-size: 11px; }
-  table.wtable th, table.wtable td {
-    text-align: left; padding: 5px 4px; border-bottom: 1px solid var(--line); white-space: nowrap;
-  }
-  table.wtable input[type=checkbox] { accent-color: var(--amber); cursor: pointer; }
-  table.wtable th { color: var(--text-dim); font-weight: 500; }
-  table.wtable td.num { color: var(--amber); font-variant-numeric: tabular-nums; }
-
-  .log {
-    background: #08070F; border: 1px solid var(--line); border-radius: 4px;
-    font-size: 11px; padding: 10px; max-height: 220px; overflow-y: auto;
-    color: var(--text-dim); white-space: pre-wrap; line-height: 1.5;
-  }
-  .log .ok { color: var(--green); }
-  .log .warn { color: var(--amber); }
-  .log .err { color: var(--red); }
-
-  .hint { font-size: 11px; color: var(--text-dim); line-height: 1.5; margin-top: 10px; }
-  .hint b { color: var(--text); }
-  canvas#glyphCanvas { position:absolute; top:0; left:0; width:100%; height:100%; image-rendering:pixelated; pointer-events:none; }
-  .widget { border:1px dashed rgba(142,115,240,.7); }
+  .stage-outer{position:relative;flex:none;width:200px;height:240px;background:#000;border:4px solid #2A2340;border-radius:30px;
+    overflow:hidden;box-shadow:0 0 0 1px #3B3260,0 18px 50px rgba(0,0,0,.65),0 0 70px var(--glow)}
+  canvas#bgCanvas,canvas#glyphCanvas{position:absolute;top:0;left:0;width:100%;height:100%;image-rendering:pixelated}
+  canvas#glyphCanvas{pointer-events:none}
+  .stage-outer{touch-action:none}
+  .zoomer{position:absolute;inset:0;transform-origin:0 0;--iz:1;will-change:transform}
+  .widget{position:absolute;border:calc(1px*var(--iz)) dashed rgba(142,115,240,.8);background:transparent;cursor:grab;touch-action:none;
+    border-radius:calc(2px*var(--iz));user-select:none}
+  .widget::after{content:'';position:absolute;inset:calc(-7px*var(--iz))}
+  .widget.sel{border:calc(2px*var(--iz)) solid var(--orange);background:rgba(242,138,60,.10);z-index:5}
+  .zoomchip{position:absolute;left:8px;bottom:8px;z-index:12;height:30px;padding:0 12px;border-radius:15px;font-size:12px;font-weight:700;
+    background:rgba(13,11,20,.82);border-color:var(--amber-dim);color:var(--text)}
+  .coordread{position:absolute;bottom:6px;right:8px;font:10px var(--mono);color:rgba(236,232,245,.55);pointer-events:none}
   .guide{position:absolute;background:#F28A3C;z-index:20;pointer-events:none;display:none}
-  .gv{top:0;bottom:0;width:1px}.gh{left:0;right:0;height:1px}
-  .grow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line)}
-  .grow>div{flex:1 1 100%}
-  .wtable-wrap{overflow-x:auto;}
+  .gv{top:0;bottom:0;width:calc(1px*var(--iz))} .gh{left:0;right:0;height:calc(1px*var(--iz))}
+  .empty{position:absolute;inset:0;z-index:8;display:none;flex-direction:column;align-items:center;justify-content:center;gap:14px;
+    padding:18px;text-align:center;font-size:14px;color:var(--text-dim);background:#08070F}
+  body:not(.loaded) .empty{display:flex}
+  .empty button{height:44px;padding:0 20px;font-weight:700;color:#1C0F05;background:linear-gradient(180deg,#F7A04F,#EA7C2E);border-color:#F7A04F;border-radius:22px}
+  body.photo-on #stage{touch-action:none;cursor:grab}
+  body.photo-on #stage .widget{opacity:.25!important;pointer-events:none}
+  body.photo-on #stage::after{content:'';position:absolute;inset:0;pointer-events:none;z-index:9;
+    background:
+      linear-gradient(rgba(255,255,255,.3),rgba(255,255,255,.3)) 33.333% 0/1px 100% no-repeat,
+      linear-gradient(rgba(255,255,255,.3),rgba(255,255,255,.3)) 66.666% 0/1px 100% no-repeat,
+      linear-gradient(rgba(255,255,255,.3),rgba(255,255,255,.3)) 0 33.333%/100% 1px no-repeat,
+      linear-gradient(rgba(255,255,255,.3),rgba(255,255,255,.3)) 0 66.666%/100% 1px no-repeat}
 
-  /* --- mobile: only kicks in under 640px, desktop layout above is untouched --- */
-  @media (max-width: 640px) {
-    body { padding: 16px 10px 48px; }
-    main { gap: 14px; }
-    .panel { padding: 12px; }
-    h1 { font-size: 17px; }
-    header p { font-size: 12px; }
-    button, input[type=file]::file-selector-button { min-height: 40px; padding: 10px 14px; }
-    input[type=text], input[type=number], select { min-height: 38px; font-size: 14px; }
-    input[type=color] { width: 44px; height: 38px; }
-    table.wtable { font-size: 12px; }
-    table.wtable th, table.wtable td { padding: 8px 6px; }
-    .grow { padding: 10px 0; }
-    .grow input[type=text] { width: 100% !important; }
-    .stage-outer { border-width: 3px; border-radius: 18px; }
-    .widget { font-size: 9px; }
+  /* ---------- dock: tools + tab bar ---------- */
+  .dock{flex:none;display:flex;flex-direction:column;background:linear-gradient(180deg,#1B1630,#130F22);
+    border:1px solid var(--line);border-bottom:0;border-radius:26px 26px 0 0;box-shadow:0 -10px 30px rgba(0,0,0,.4)}
+  .tools{height:clamp(230px,41dvh,370px);display:flex;flex-direction:column;min-height:0}
+  .wchips{flex:none;display:flex;gap:8px;overflow-x:auto;padding:14px 38px 4px 14px;scroll-snap-type:x proximity;scroll-padding-inline:14px;
+    -webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 34px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 34px),transparent)}
+  .tools[data-tab=photo] .wchips,.tools[data-tab=add] .wchips,.tools[data-tab=photo] .wbar,.tools[data-tab=add] .wbar,
+  .tools[data-tab=photo] .wmeta,.tools[data-tab=add] .wmeta{display:none}
+  .wbar{flex:none;display:flex;align-items:center;gap:8px;padding:8px 14px 0}
+  .name-edit{flex:1;min-width:0;background:transparent;border:1px solid transparent;border-bottom-color:var(--line);border-radius:10px;
+    padding:6px 8px;font-size:17px;font-weight:700}
+  .ibtn{flex:none;width:42px;height:42px;border-radius:14px;display:grid;place-items:center;color:var(--amber)}
+  .ibtn .eyeoff{display:none} .ibtn.off .eye{display:none} .ibtn.off .eyeoff{display:block} .ibtn.off{color:var(--text-dim)}
+  .wmeta{flex:none;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:6px 14px 0 22px;font-size:12px;color:var(--text-dim);min-height:42px}
+  #hbox .step button{width:38px;height:34px;font-size:18px}
+  #hbox .step input{width:46px;padding:6px 0;font-size:14px}
+  #fs-readout{font:12px var(--mono);color:#FFD2B0}
+  .wchip{flex:none;height:36px;padding:0 16px;border-radius:18px;font-size:13px;font-weight:600;white-space:nowrap;
+    background:#0F0C1A;color:var(--text-dim);scroll-snap-align:start}
+  .wchip.on{background:rgba(242,138,60,.16);border-color:var(--orange);color:#FFD2B0}
+  .wchip.off{text-decoration:line-through;opacity:.6}
+  .pane{display:none;flex:1;min-height:0;overflow-y:auto;padding:10px 16px 12px;animation:paneIn .16s ease-out}
+  .pane.on{display:block}
+  @keyframes paneIn{from{opacity:0}to{opacity:1}}
+  .tools[data-tab=photo] .pane,.tools[data-tab=add] .pane{padding-top:18px}
+
+  .tabbar{flex:none;display:flex;padding:6px 8px calc(8px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);background:rgba(13,11,20,.9)}
+  .tab{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;background:none;border:0;border-radius:0;
+    color:var(--text-dim);font-size:12px;font-weight:600;padding:2px 0}
+  .tab .ico{width:58px;height:30px;border-radius:15px;display:grid;place-items:center;transition:background .18s,color .18s}
+  .tab.on{color:var(--text)} .tab.on .ico{background:rgba(142,115,240,.26);color:#B7A4FF}
+
+  .sw{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:14px;min-height:40px}
+  .sw small{display:block;color:var(--text-dim);font-size:12px;margin-top:2px}
+  .sw input{-webkit-appearance:none;appearance:none;flex:none;width:48px;height:28px;margin:0;border:0;border-radius:14px;
+    background:#2C2640;position:relative;transition:background .18s;cursor:pointer}
+  .sw input::after{content:'';position:absolute;top:3px;left:3px;width:22px;height:22px;border-radius:50%;background:#B9B2D3;transition:transform .18s,background .18s}
+  .sw input:checked{background:var(--orange)} .sw input:checked::after{transform:translateX(20px);background:#1C0F05}
+
+  /* style pane */
+  .srow{padding:6px 0}
+  .srow.line{display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .slabel{display:block;font-size:13px;color:var(--text-dim);margin-bottom:6px}
+  .srow.line .slabel{margin:0}
+  .dots{display:flex;gap:8px;align-items:center;overflow-x:auto;padding:2px}
+  .dot{flex:none;width:28px;height:28px;border-radius:50%;border:2px solid #3B3260}
+  .dot.on{border-color:#fff;box-shadow:0 0 0 2px rgba(255,255,255,.25)}
+  input[type=color]{-webkit-appearance:none;appearance:none;flex:none;width:34px;height:34px;padding:0;border:2px dashed var(--amber-dim);
+    border-radius:50%;background:none;overflow:hidden;cursor:pointer}
+  input[type=color]::-webkit-color-swatch-wrapper{padding:0}
+  input[type=color]::-webkit-color-swatch{border:none;border-radius:50%}
+  .step{display:flex;align-items:center;background:#0F0C1A;border:1px solid var(--line);border-radius:14px}
+  .step button{width:44px;height:42px;border:0;background:transparent;font-size:20px;border-radius:14px}
+  .step input{width:56px;text-align:center;border:0;background:transparent;padding:8px 0;-moz-appearance:textfield}
+  .step input::-webkit-outer-spin-button,.step input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+  .fontstrip{display:flex;gap:8px;overflow-x:auto;padding:2px 2px 8px;margin:0 -16px;padding-left:16px;padding-right:16px;scroll-snap-type:x proximity}
+  .fchip{flex:none;width:96px;min-height:62px;padding:6px 6px 6px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;
+    background:#0F0C1A;border-radius:14px;scroll-snap-align:start}
+  .fchip .fsamp{font-size:22px;line-height:1.1;color:var(--amber);white-space:nowrap}
+  .fchip i{font-style:normal;font-size:11px;color:var(--text-dim);white-space:nowrap;font-weight:500}
+  .fchip.on{border-color:var(--amber);background:#1F1838;box-shadow:0 0 0 2px var(--glow)}
+  .fchip.on i{color:var(--amber)}
+  details.dev{margin-top:2px} details.dev summary{font-size:13px;color:var(--text-dim);padding:8px 0;cursor:pointer}
+  details.dev input{width:100%}
+  .note{font-size:13px;color:var(--text-dim);line-height:1.5;padding:6px 0}
+  .note b{color:var(--text)}
+
+  /* photo pane */
+  .pdock{display:flex;flex-direction:column;gap:14px}
+  .chips{display:flex;gap:8px}
+  .chips button{flex:1;height:38px;border-radius:19px;font-size:13px;font-weight:600;color:var(--text-dim)}
+  .chips button.on{background:rgba(242,138,60,.16);border-color:var(--orange);color:#FFD2B0}
+  .zoomrow{display:flex;align-items:center;gap:8px}
+  .zoomrow button{flex:none;width:44px;height:44px;font-size:22px;border-radius:14px}
+  #z-read{min-width:56px;text-align:right;font:13px var(--mono);color:var(--amber)}
+  input[type=range]{-webkit-appearance:none;appearance:none;flex:1;min-width:0;height:34px;background:transparent;border:0;padding:0;margin:0;box-shadow:none}
+  input[type=range]::-webkit-slider-runnable-track{height:6px;border-radius:6px;background:#2C2640}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:28px;height:28px;margin-top:-11px;border-radius:50%;
+    background:radial-gradient(circle at 35% 30%,#B7A4FF,#8E73F0);border:2px solid #1C0F05;box-shadow:0 2px 8px rgba(0,0,0,.5)}
+  .btnrow{display:flex;gap:8px}
+  .btnrow button{flex:1 1 0;height:44px;font-size:14px;font-weight:600}
+  .btnrow button.on{border-color:var(--amber);color:var(--amber)}
+  .btnrow button.primary{background:linear-gradient(180deg,#F7A04F,#EA7C2E);color:#1C0F05;border-color:#F7A04F}
+  .pbig{display:none;height:52px;border-radius:26px;font-size:16px;font-weight:700;color:#1C0F05;background:linear-gradient(180deg,#F7A04F,#EA7C2E);border-color:#F7A04F}
+  .pdock.nophoto .chips,.pdock.nophoto .zoomrow,.pdock.nophoto .btnrow{display:none}
+  .pdock.nophoto .pbig{display:block}
+  #p-hint{margin:0;text-align:center}
+  .hint{font-size:12px;color:var(--text-dim);line-height:1.5}
+  .filestat{font-size:12px;color:var(--green);min-height:16px;word-break:break-all} .filestat.empty{color:var(--text-dim)} .filestat.err{color:var(--red)}
+
+  /* rows used in add pane + sheets */
+  .lrow{display:flex;align-items:center;gap:14px;width:100%;min-height:58px;padding:10px 14px;text-align:left;margin-bottom:8px;
+    background:#110E1E;border-radius:16px}
+  .lrow .t{flex:1;min-width:0;font-size:15px;font-weight:600}
+  .lrow .t small{display:block;font-size:12px;font-weight:400;color:var(--text-dim);margin-top:2px;line-height:1.35}
+  .lrow .li{flex:none;width:36px;height:36px;border-radius:12px;display:grid;place-items:center;background:#1E1933;color:var(--amber)}
+  .lrow.on{border-color:var(--amber);background:#1A1433}
+  .lrow .tick{flex:none;color:var(--orange);font-weight:700}
+  .badge{font-size:11px;font-weight:600;color:var(--amber);border:1px solid var(--amber-dim);border-radius:8px;padding:1px 6px;margin-left:8px}
+
+  /* ---------- sheets / toast ---------- */
+  .scrim{position:fixed;inset:0;background:rgba(5,4,10,.62);opacity:0;pointer-events:none;transition:opacity .2s;z-index:90}
+  .scrim.on{opacity:1;pointer-events:auto}
+  .sheet{position:fixed;left:0;right:0;bottom:0;max-width:600px;margin:0 auto;max-height:86dvh;overflow-y:auto;z-index:100;
+    background:#171325;border:1px solid var(--line);border-bottom:0;border-radius:26px 26px 0 0;
+    padding:8px 16px calc(18px + env(safe-area-inset-bottom,0px));transform:translateY(106%);
+    transition:transform .26s cubic-bezier(.2,.8,.2,1);box-shadow:0 -20px 60px rgba(0,0,0,.6)}
+  .sheet.on{transform:none}
+  .grab{height:28px;margin:0 -16px 4px;display:flex;align-items:center;justify-content:center;touch-action:none;cursor:grab}
+  .grab::after{content:'';width:42px;height:5px;border-radius:3px;background:#3B3260}
+  .sheet.drag{transition:none}
+  .sheethead{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+  .sheethead h3{margin:0 4px}
+  .sheet h3{margin:0 4px 14px;font-size:18px;font-weight:700}
+  .sec{font-size:13px;font-weight:600;color:var(--text-dim);margin:16px 4px 8px}
+  .log{background:#08070F;border:1px solid var(--line);border-radius:12px;font:11px/1.5 var(--mono);padding:10px;height:min(52dvh,420px);
+    overflow-y:auto;color:var(--text-dim);white-space:pre-wrap;-webkit-user-select:text;user-select:text}
+  .log .ok{color:var(--green)} .log .warn{color:#FFB347} .log .err{color:var(--red)}
+  .toast{position:fixed;left:50%;bottom:300px;transform:translate(-50%,10px);max-width:min(90vw,460px);z-index:120;
+    padding:10px 16px;border-radius:16px;background:#2A2150;border:1px solid var(--amber-dim);font-size:13px;line-height:1.4;
+    box-shadow:0 10px 30px rgba(0,0,0,.5);opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}
+  .toast.on{opacity:1;transform:translate(-50%,0)}
+
+  /* landscape phones: preview left, tools right */
+  @media (orientation:landscape) and (max-height:540px){
+    .main{flex-direction:row}
+    .dock{width:min(52%,440px);border-radius:26px 0 0 0;border-right:0}
+    .tools{flex:1;height:auto}
+    .stage-holder{padding:4px 10px 10px}
   }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 
-  .native-only { display: none; }
-  body.native .native-only { display: block; }
-  body.native .web-only { display: none; }
-  .native-inline { display: none; } body.native .native-inline { display: inline; }
-  #watch-status { font-size: 13px; margin: 8px 0; }
-  #watch-status.ok { color: #6fdc8c; } #watch-status.err { color: #ff7b7b; } #watch-status.busy { color: #FFB347; }
-  #send-progress { width: 100%; height: 10px; margin: 6px 0 10px; }
+  /* misc controls */
+  .smallbtn{height:36px;padding:0 16px;border-radius:18px;font-size:13px;font-weight:600}
+  .smallbtn.danger{background:#3A1717;border-color:#7A2E2E;color:#FFB3A8}
+  .linkbtn{display:none;margin:0 auto;padding:8px 14px;background:none;border:0;border-radius:10px;color:var(--text-dim);font-size:13px;text-decoration:underline}
+  .pdock:not(.nophoto) .linkbtn{display:block}
+  .btnrow button.primary{background:linear-gradient(180deg,#F7A04F,#EA7C2E);color:#1C0F05;border-color:#F7A04F}
+  .frow{padding:0;gap:0;align-items:stretch}
+  .frow .fmain{flex:1;min-width:0;display:flex;align-items:center;gap:14px;min-height:56px;padding:10px 14px;background:none;border:0;border-radius:16px;text-align:left}
+  .frow .rowx{flex:none;width:52px;border:0;border-radius:0 16px 16px 0;background:none;color:var(--text-dim);font-size:22px;line-height:1}
+  .frow.confirm{align-items:center;padding:8px 10px 8px 14px;gap:8px}
+  .frow.confirm .t{font-size:14px}
+  .pair .t small{font-family:var(--mono)}
 
-  /* ===== phone / app layout ===== */
-  #sendbar { display: none; position: fixed; left: 0; right: 0; bottom: 0; z-index: 50;
-    background: var(--panel); border-top: 1px solid var(--line); align-items: center; gap: 12px;
-    padding: 8px 12px calc(8px + env(safe-area-inset-bottom, 0px)); }
-  body.native #sendbar { display: flex; }
-  #sendbar .st { flex: 1 1 auto; min-width: 0; }
-  #sendbar #watch-status { margin: 0; font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  #sendbar #send-progress { margin: 5px 0 0; }
-  #sendbar button { width: auto; flex: 0 0 auto; min-height: 46px; padding: 0 22px; font-size: 14px; }
-  body.native { padding-bottom: 92px; }
-  .panel > h2 { cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-  .panel > h2::after { content: '▾'; color: var(--amber-dim); font-size: 13px; }
-  .panel.collapsed > h2 { margin-bottom: 0; }
-  .panel.collapsed > h2::after { content: '▸'; }
-  .panel.collapsed > :not(h2) { display: none !important; }
-  @media (max-width: 980px) {
-    body { padding: 12px 10px 24px; }
-    body.native { padding-bottom: 92px; }
-    header { margin-bottom: 12px; }
-    h1 { font-size: 16px; }
-    header p { display: none; }
-    main { gap: 12px; }
-    .panel + .panel { margin-top: 12px; }
-    .stage-wrap { gap: 6px; }
-    .stage-outer { width: 100%; }
-    .stage-wrap .hint { max-width: 100% !important; }
-    table.wtable th:nth-child(5), table.wtable td:nth-child(5) { display: none; }
-    table.wtable th, table.wtable td { white-space: normal; padding: 7px 4px; }
-    table.wtable input.label-edit { width: 100% !important; min-width: 90px; }
-    .grow { gap: 8px 10px; }
-    .grow select, .grow input[type=text] { flex: 1 1 100%; width: 100% !important; max-width: none !important; }
-    .grow input[type=number] { width: 64px !important; }
-    .log { max-height: 180px; }
-  }
-
-  /* ===== v3 visual refresh ===== */
-  :root { color-scheme: dark; --sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; --glow: rgba(142,115,240,.2); }
-  body, button, input, select, textarea { font-family: var(--sans); }
-  .log, .coordread, td.num, #fs-readout { font-family: var(--mono); }
-  body { background: radial-gradient(900px 420px at 50% -80px, #241A44 0%, var(--bg) 70%) fixed; }
-  h1 { font-size: 20px; display: flex; align-items: center; gap: 10px; letter-spacing: .01em; }
-  h1::before { content: ''; width: 10px; height: 10px; border-radius: 50%; background: var(--amber); box-shadow: 0 0 12px var(--amber); }
-  .panel { background: linear-gradient(180deg, #1B1630, #141023); border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,.35); }
-  .panel h2 { font-size: 12px; color: var(--amber); letter-spacing: .12em; }
-  .hint { color: #8B84A6; }
-
-  input[type=text], input[type=number], input:not([type]), select {
-    -webkit-appearance: none; appearance: none; background-color: #0F0C1A; color: var(--text);
-    border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; font-size: 14px; outline: none;
-    transition: border-color .15s, box-shadow .15s; }
-  input[type=text]:focus, input[type=number]:focus, select:focus { border-color: var(--amber); box-shadow: 0 0 0 3px var(--glow); }
-  ::placeholder { color: #6A6388; }
-  select { padding-right: 36px; background-repeat: no-repeat; background-position: right 12px center;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' fill='none' stroke='%23e8a33d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>"); }
-  select option { background: #171325; color: var(--text); }
-  input[type=file] { background: #0F0C1A; border: 1px dashed #3B3260; border-radius: 14px; padding: 10px; }
-  input[type=file]::file-selector-button { background: linear-gradient(180deg, #2A2150, #1F1840); color: var(--amber);
-    border: 1px solid var(--amber-dim); border-radius: 10px; padding: 9px 14px; font-weight: 600; font-size: 12px; margin-right: 12px; }
-  button { border-radius: 12px; background: linear-gradient(180deg, #231D3A, #1B1630); border: 1px solid var(--line);
-    transition: transform .08s, border-color .15s, background .15s; -webkit-tap-highlight-color: transparent; }
-  button:active { transform: scale(.97); }
-  button.primary { background: linear-gradient(180deg, #F7A04F, #EA7C2E); color: #1C0F05; border-color: #F7A04F; box-shadow: 0 4px 16px rgba(242,138,60,.30); }
-  button.primary:hover { background: linear-gradient(180deg, #F7A04F, #EA7C2E); }
-  input[type=checkbox] { -webkit-appearance: none; appearance: none; width: 22px; height: 22px; border: 1.5px solid var(--amber-dim);
-    border-radius: 7px; background: #0F0C1A; position: relative; vertical-align: middle; margin: 0 6px 0 0; cursor: pointer; flex: 0 0 auto; }
-  input[type=checkbox]:checked { background: var(--amber); border-color: var(--amber); }
-  input[type=checkbox]:checked::after { content: ''; position: absolute; left: 6px; top: 2px; width: 6px; height: 11px;
-    border: solid #1C0F05; border-width: 0 2.5px 2.5px 0; transform: rotate(45deg); }
-  input[type=color] { -webkit-appearance: none; appearance: none; width: 46px; height: 46px; padding: 0; border: 2px solid #3B3260;
-    border-radius: 50%; background: none; overflow: hidden; cursor: pointer; flex: 0 0 auto; }
-  input[type=color]::-webkit-color-swatch-wrapper { padding: 0; }
-  input[type=color]::-webkit-color-swatch { border: none; border-radius: 50%; }
-  progress { -webkit-appearance: none; appearance: none; border: none; border-radius: 6px; background: #0F0C1A; height: 8px; overflow: hidden; }
-  progress::-webkit-progress-bar { background: #0F0C1A; }
-  progress::-webkit-progress-value { background: linear-gradient(90deg, #EA7C2E, #F7A04F); border-radius: 6px; transition: width .2s; }
-  ::-webkit-scrollbar { width: 6px; height: 6px; } ::-webkit-scrollbar-thumb { background: #2C2640; border-radius: 6px; }
-
-  .stage-outer { border: 5px solid #2A2340; border-radius: 32px;
-    box-shadow: 0 0 0 1px #3B3260, 0 18px 50px rgba(0,0,0,.65), 0 0 70px var(--glow); }
-  .stage-tools { display: flex; justify-content: flex-end; width: min(480px, 100%); }
-  .stage-tools button { width: auto; padding: 8px 14px; font-size: 12px; border-radius: 20px; color: var(--amber); border-color: var(--amber-dim); }
-  table.wtable th { text-transform: uppercase; font-size: 10px; letter-spacing: .08em; }
-  table.wtable input.label-edit { background: transparent; border-color: transparent; padding: 6px 8px; }
-  table.wtable input.label-edit:focus { background: #0F0C1A; border-color: var(--amber); }
-  .grow { background: #110E1E; border: 1px solid var(--line); border-radius: 14px; padding: 12px; margin-bottom: 10px; }
-  .grow > div:first-child { font-size: 14px; }
-  .grow label.hint { display: flex; align-items: center; gap: 6px; }
-  .log { border-radius: 12px; }
-
-  .fontstrip { flex: 1 1 100%; min-width: 0; display: flex; gap: 8px; overflow-x: auto; padding: 4px 2px 8px; scroll-snap-type: x proximity; -webkit-overflow-scrolling: touch; }
-  .fchip { flex: 0 0 auto; width: 96px; min-height: 76px; padding: 8px 6px 7px; display: flex; flex-direction: column; align-items: center;
-    justify-content: center; gap: 5px; background: #0F0C1A; border: 1px solid var(--line); border-radius: 14px; scroll-snap-align: start; margin: 0 !important; }
-  .fchip .fsamp { font-size: 26px; line-height: 1.1; color: var(--amber); white-space: nowrap; font-family: var(--sans); }
-  .fchip i { font-style: normal; font-size: 10px; color: var(--text-dim); white-space: nowrap; font-weight: 500; }
-  .fchip.on { border-color: var(--amber); background: #1F1838; box-shadow: 0 0 0 2px var(--glow); }
-  .fchip.on i { color: var(--amber); }
-
-  #sendbar { background: rgba(19,15,34,.92); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
-  #sendbar button { border-radius: 14px; }
-
-  /* ----- fullscreen editor ----- */
-  .widget.sel { border: 2px solid #F28A3C; background: rgba(242,138,60,.12); box-shadow: 0 0 0 1px rgba(242,138,60,.35), 0 0 14px rgba(242,138,60,.5); z-index: 5; }
-  .fs-topbar, .fs-dock { display: none; }
-  body.fsmode { overflow: hidden; }
-  .stage-wrap.fsmode-on { position: fixed; inset: 0; z-index: 200; background: #08070F; justify-content: space-between; gap: 8px;
-    padding: env(safe-area-inset-top, 0px) 8px calc(8px + env(safe-area-inset-bottom, 0px)); overflow: hidden; }
-  .stage-wrap.fsmode-on .stage-tools, .stage-wrap.fsmode-on > .hint { display: none; }
-  .stage-wrap.fsmode-on .fs-topbar { display: flex; width: 100%; align-items: center; gap: 12px; padding-top: 8px; }
-  .fs-topbar button { width: auto; padding: 9px 16px; font-size: 13px; }
-  .fs-title { color: var(--text-dim); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; }
-  .stage-wrap.fsmode-on .stage-outer { flex: 0 0 auto;
-    width: min(calc(100vw - 16px), calc((100vh - 270px) * 0.845));
-    width: min(calc(100vw - 16px), calc((100dvh - 270px) * 0.845)); }
-  .stage-wrap.fsmode-on .fs-dock { display: flex; flex-direction: column; gap: 12px; width: 100%; max-width: 520px; }
-  .fs-chips { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; }
-  .fs-chips button { width: auto; flex: 0 0 auto; margin: 0 !important; padding: 8px 14px; font-size: 12px; border-radius: 20px; white-space: nowrap; }
-  .fs-chips button.on { background: rgba(242,138,60,.16); border-color: #F28A3C; color: #FFD2B0; }
-  .fs-pad { display: flex; gap: 16px; align-items: center; justify-content: space-between; }
-  .pad { display: grid; grid-template-columns: repeat(3, 54px); grid-template-rows: repeat(3, 54px); gap: 6px; }
-  .pad button { width: 54px; height: 54px; padding: 0; margin: 0 !important; font-size: 20px; border-radius: 16px; touch-action: manipulation; }
-  .pad .u { grid-area: 1 / 2; } .pad .l { grid-area: 2 / 1; } .pad .c { grid-area: 2 / 2; font-size: 12px; color: var(--amber); }
-  .pad .r { grid-area: 2 / 3; } .pad .d { grid-area: 3 / 2; }
-  .fs-side { flex: 1; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
-  #fs-readout { white-space: pre; color: #FFD2B0; font-size: 13px; line-height: 1.5; }
-  #fs-eye { margin: 0 !important; font-size: 12px; }
-
-  /* ----- photo mode (fullscreen) ----- */
-  .fs-wdock, .fs-pdock { display: flex; flex-direction: column; gap: 12px; }
-  .fs-pdock { display: none; }
-  body.photo-on .fs-wdock { display: none; }
-  body.photo-on .fs-pdock { display: flex; }
-  body.photo-on #stage { touch-action: none; cursor: grab; }
-  body.photo-on #stage .widget { opacity: .25 !important; pointer-events: none; }
-  body.photo-on #stage::after { content: ''; position: absolute; inset: 0; pointer-events: none; z-index: 9;
-    background-image:
-      linear-gradient(to right, transparent calc(33.33% - .5px), rgba(255,255,255,.28) calc(33.33% - .5px), rgba(255,255,255,.28) calc(33.33% + .5px), transparent calc(33.33% + .5px), transparent calc(66.66% - .5px), rgba(255,255,255,.28) calc(66.66% - .5px), rgba(255,255,255,.28) calc(66.66% + .5px), transparent calc(66.66% + .5px)),
-      linear-gradient(to bottom, transparent calc(33.33% - .5px), rgba(255,255,255,.28) calc(33.33% - .5px), rgba(255,255,255,.28) calc(33.33% + .5px), transparent calc(33.33% + .5px), transparent calc(66.66% - .5px), rgba(255,255,255,.28) calc(66.66% - .5px), rgba(255,255,255,.28) calc(66.66% + .5px), transparent calc(66.66% + .5px)); }
-  .seg { display: flex; gap: 2px; margin-left: auto; padding: 3px; background: #0F0C1A; border: 1px solid var(--line); border-radius: 14px; }
-  .seg button { width: auto; margin: 0 !important; padding: 8px 14px; font-size: 12px; border: none; background: transparent; border-radius: 11px; box-shadow: none; color: var(--text-dim); }
-  .seg button.on { background: linear-gradient(180deg, #F7A04F, #EA7C2E); color: #1C0F05; }
-  .zoomrow { display: flex; align-items: center; gap: 10px; }
-  .zoomrow button { width: 44px; height: 44px; padding: 0; margin: 0 !important; font-size: 22px; flex: 0 0 auto; border-radius: 14px; }
-  #z-read { min-width: 58px; text-align: right; font-family: var(--mono); color: var(--amber); font-size: 13px; }
-  input[type=range] { -webkit-appearance: none; appearance: none; flex: 1; min-width: 0; height: 34px; background: transparent; border: none; padding: 0; margin: 0; box-shadow: none; }
-  input[type=range]::-webkit-slider-runnable-track { height: 6px; border-radius: 6px; background: #2C2640; }
-  input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 28px; height: 28px; margin-top: -11px; border-radius: 50%;
-    background: radial-gradient(circle at 35% 30%, #B7A4FF, #8E73F0); border: 2px solid #1C0F05; box-shadow: 0 2px 8px rgba(0,0,0,.5); }
-  .btnrow { display: flex; gap: 8px; }
-  .btnrow button { flex: 1 1 0; width: auto; margin: 0 !important; padding: 11px 6px; font-size: 13px; }
-  .btnrow button.on { border-color: var(--amber); color: var(--amber); }
-  #p-hint { margin: 0; text-align: center; }
+  /* keyboard open: give the preview room back */
+  body.kb .facebar,body.kb .tabbar,body.kb .wmeta{display:none}
+  body.kb .stage-holder{padding:2px 14px 6px}
+  body.kb .tools{height:auto;max-height:50dvh}
+  body.kb .pane.on{flex:0 1 auto}
+  .frow{border:1px solid var(--line)}
 </style>
 </head>
 <body>
+<div class="app">
+  <header class="appbar">
+    <svg class="mark" width="32" height="32" viewBox="16 14 80 80" aria-hidden="true"><g transform="translate(-6 0)"><path d="M58 27H45a11 11 0 0 0-11 11v32a11 11 0 0 0 11 11h13" fill="none" stroke="#8E73F0" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(40 70) rotate(-45)">
+    <path d="M3 -2.2 L30 -3.8 L30 3.8 L3 2.2 A2.2 2.2 0 0 1 3 -2.2 Z" fill="#ECE8F5"/>
+    <rect x="30" y="-6" width="13" height="12" rx="2" fill="#B7A4FF"/>
+    <path d="M35.5 -6V6M39 -6V6" stroke="#0D0B14" stroke-width="1.3" opacity=".55"/>
+    <path d="M43 -6 C52 -9.5 62 -6.5 70 0 C62 6.5 52 9.5 43 6 Z" fill="#F28A3C"/>
+  </g>
+  <rect x="86" y="38" width="4.6" height="4.6" rx="1" fill="#8E73F0"/>
+  <rect x="83" y="48" width="5.6" height="5.6" rx="1.2" fill="#F28A3C"/>
+  <rect x="79" y="58" width="4.6" height="4.6" rx="1" fill="#B7A4FF"/></g></svg>
+    <div class="ttl" id="ttl"><b>FS1Canvas</b><span id="watch-status">Not connected.</span></div>
+    <button class="send" id="btn-send" type="button">Send</button>
+    <button class="iconbtn" id="btn-menu" type="button" aria-label="Menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg>
+    </button>
+    <progress id="send-progress" value="0" max="1"></progress>
+  </header>
 
-<header>
-  <h1>FS1Replay</h1>
-  <p>Design a face, then send it straight to the watch.</p>
-</header>
-
-<main>
-  <!-- LEFT: inputs -->
-  <div>
-    <div class="panel">
-      <h2>1. Template</h2>
-      <label class="field native-only">
-        <span class="lbl">Template (bundled with the app)</span>
-        <select id="sel-template"></select>
-      </label>
-      <label class="field">
-        <span class="lbl"><span class="web-only">default-ring.bin (known-good face)</span><span class="native-inline">Or load a .bin from this device</span></span>
-        <input type="file" id="f-template" accept=".bin,application/octet-stream,*/*">
-        <div class="filestat empty" id="stat-template">No file loaded.</div>
-      </label>
-      <button id="btn-keep-template" class="native-only" style="display:none;margin-bottom:8px;">Keep this template in the app</button>
-
-      <h2 style="margin-top:18px;">2. Photo</h2>
-      <label class="field">
-        <span class="lbl">Your photo</span>
-        <input type="file" id="f-photo" accept="image/*">
-        <div class="filestat empty" id="stat-photo">No photo loaded.</div>
-      </label>
-      <label class="field">
-        <span class="lbl">Fit</span>
-        <select id="sel-fit">
-          <option value="cover" selected>cover (crop to fill)</option>
-          <option value="contain">contain (letterbox)</option>
-          <option value="stretch">stretch</option>
-        </select>
-      </label>
-      <div class="hint" style="margin:-6px 0 12px;">Zoom, move and rotate the photo: open the <b>Fullscreen editor</b> → <b>Photo</b>.</div>
-    </div>
-
-  </div>
-
-  <!-- CENTER: canvas -->
-  <div class="stage-wrap">
-    <div class="stage-tools"><button id="btn-fs" type="button">⛶ Fullscreen editor</button></div>
-    <div class="fs-topbar"><button id="fs-close" type="button">✕ Done</button><div class="seg"><button id="seg-w" type="button" class="on">Widgets</button><button id="seg-p" type="button">Photo</button></div></div>
-    <div class="stage-outer" id="stage">
-      <canvas id="bgCanvas" width="240" height="284"></canvas>
-      <canvas id="glyphCanvas" width="240" height="284"></canvas>
-      <!-- widgets injected by JS -->
-      <div class="coordread" id="coordread"></div>
-    </div>
-    <div class="hint" style="text-align:center; max-width:480px;">
-      Drag the boxes to reposition the widgets. Hold Shift (desktop) to disable snapping.
-    </div>
-    <div class="fs-dock">
-      <div class="fs-wdock">
-        <div class="fs-chips" id="fs-chips"></div>
-        <div class="fs-pad">
-          <div class="pad" id="fs-pad">
-            <button type="button" class="u" data-dx="0" data-dy="-1">▲</button>
-            <button type="button" class="l" data-dx="-1" data-dy="0">◀</button>
-            <button type="button" class="c" id="fs-step">1px</button>
-            <button type="button" class="r" data-dx="1" data-dy="0">▶</button>
-            <button type="button" class="d" data-dx="0" data-dy="1">▼</button>
+  <div class="main">
+    <section class="stage-area">
+      <div class="facebar">
+        <button class="facechip" id="face-chip" type="button">
+          <span id="face-name">Choose a face</span>
+          <svg width="12" height="8" viewBox="0 0 12 8"><path d="M1 1l5 5 5-5" fill="none" stroke="#8E73F0" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <div class="stage-holder" id="stage-holder">
+        <div class="stage-outer" id="stage">
+          <div class="zoomer" id="zoomer">
+            <canvas id="bgCanvas" width="240" height="284"></canvas>
+            <canvas id="glyphCanvas" width="240" height="284"></canvas>
           </div>
-          <div class="fs-side">
-            <div id="fs-readout">Tap a widget to select it</div>
-            <button type="button" id="fs-eye">Hide on watch</button>
+          <div class="coordread" id="coordread"></div>
+          <button type="button" class="zoomchip" id="zoom-chip" hidden>1.0×</button>
+          <div class="empty"><div>No face loaded yet.</div><button type="button" id="empty-btn">Choose a face</button></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="dock">
+      <section class="tools" id="tools" data-tab="style">
+        <div class="wchips" id="wchips"></div>
+        <div class="wbar" id="wbar">
+          <input type="text" class="name-edit" id="name-edit" maxlength="32" aria-label="Widget name" enterkeyhint="done">
+          <button type="button" class="ibtn" id="vis-btn" aria-label="Show on watch" aria-pressed="true">
+            <svg class="eye" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+            <svg class="eyeoff" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l18 18M10.6 5.1A10 10 0 0 1 12 5c6.4 0 10 7 10 7a17 17 0 0 1-3.2 4M6.5 6.7C3.8 8.4 2 12 2 12s3.6 7 10 7c1.5 0 2.8-.3 4-.8"/></svg>
+          </button>
+          <button type="button" class="ibtn" id="fs-home" aria-label="Reset position">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 1 0 3-6.2M4 4v4h4"/></svg>
+          </button>
+        </div>
+        <div class="wmeta"><span id="fs-readout">—</span><div id="hbox"></div></div>
+
+        <div class="pane on" id="pane-style"><div id="gtable"></div><datalist id="fontlist"><option value="Arial"><option value="Impact"><option value="Georgia"><option value="Courier New"><option value="Verdana"><option value="Trebuchet MS"><option value="Times New Roman"><option value="Comic Sans MS"><option value="Arial Black"><option value="monospace"></datalist></div>
+
+        <div class="pane" id="pane-photo">
+          <div class="pdock nophoto" id="pdock">
+            <button type="button" class="pbig" id="p-big">Choose a photo</button>
+            <div class="chips" id="fit-chips">
+              <button type="button" data-fit="cover">Fill</button>
+              <button type="button" data-fit="contain">Fit</button>
+              <button type="button" data-fit="stretch">Stretch</button>
+            </div>
+            <div class="zoomrow">
+              <button type="button" id="z-minus" aria-label="Zoom out">−</button>
+              <input type="range" id="z-range" min="0" max="100" value="38" aria-label="Zoom">
+              <button type="button" id="z-plus" aria-label="Zoom in">+</button>
+              <span id="z-read">1.00×</span>
+            </div>
+            <div class="btnrow">
+              <button type="button" id="p-rotl" aria-label="Rotate left">⟲</button>
+              <button type="button" id="p-rotr" aria-label="Rotate right">⟳</button>
+              <button type="button" id="p-flip">Flip</button>
+              <button type="button" id="p-reset">Reset</button>
+              <button type="button" id="p-choose">Change</button>
+            </div>
+            <div class="hint" id="p-hint">Drag to move · pinch to zoom</div>
+            <div class="filestat empty" id="stat-photo"></div>
+            <button type="button" class="linkbtn" id="p-remove">Remove photo</button>
           </div>
         </div>
-      </div>
-      <div class="fs-pdock">
-        <div class="fs-chips" id="fit-chips">
-          <button type="button" data-fit="cover">Fill</button>
-          <button type="button" data-fit="contain">Fit</button>
-          <button type="button" data-fit="stretch">Stretch</button>
+
+        <div class="pane" id="pane-add">
+          <button type="button" class="lrow" id="btn-add-battery-icon">
+            <span class="li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="7" width="16" height="10" rx="2.5"/><path d="M22 11v2"/></svg></span>
+            <span class="t">Battery icon<small>A picture battery that fills with the charge level.</small></span>
+          </button>
+          <button type="button" class="lrow" id="btn-add-numeric">
+            <span class="li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M4 15V6a2 2 0 0 1 2-2h9"/></svg></span>
+            <span class="t">Copy a number<small>Another digit readout in the same font and colour, for example calories.</small></span>
+          </button>
+          <div class="hint" style="padding:2px 4px">New widgets appear at the top-left. Drag them into place on the Style tab.</div>
         </div>
-        <div class="zoomrow">
-          <button type="button" id="z-minus">−</button>
-          <input type="range" id="z-range" min="0" max="100" value="38">
-          <button type="button" id="z-plus">+</button>
-          <span id="z-read">1.00×</span>
-        </div>
-        <div class="btnrow">
-          <button type="button" id="p-rotl">⟲</button>
-          <button type="button" id="p-rotr">⟳</button>
-          <button type="button" id="p-flip">Flip</button>
-          <button type="button" id="p-reset">Reset</button>
-          <button type="button" id="p-choose">Photo…</button>
-        </div>
-        <div class="hint" id="p-hint">Drag to move · pinch to zoom</div>
-      </div>
+      </section>
+
+      <nav class="tabbar" id="tabbar">
+        <button class="tab on" type="button" data-tab="style"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3.5 4.2 6 7 6 10a6 6 0 0 1-12 0c0-3 2.5-5.8 6-10z"/></svg></span>Style</button>
+        <button class="tab" type="button" data-tab="photo"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="1.6"/><path d="M4 18l5-5 4 4 3-3 4 4"/></svg></span>Photo</button>
+        <button class="tab" type="button" data-tab="add"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg></span>Add</button>
+      </nav>
     </div>
   </div>
-
-  <!-- RIGHT: widget table + export -->
-  <div>
-    <div class="panel">
-      <h2>Widget positions</h2>
-      <div class="wtable-wrap"><table class="wtable" id="wtable">
-        <thead><tr><th>show</th><th>widget</th><th>x</th><th>y</th><th>offset</th></tr></thead>
-        <tbody></tbody>
-      
-    </table></div>
-      <button id="btn-reset-positions" style="margin-top:12px;">Reset to template defaults</button>
-      <div class="hint">
-        Unchecking "show" doesn't erase the widget's position — it moves it off-canvas
-        (x=250, y=300) only in the exported file, so you can re-check it later without
-        losing where you'd placed it. Note: this hides the <b>live number</b> the watch draws
-        for that widget. If a widget's icon is baked into your photo itself (not drawn by the
-        watch), you'll need to paint over it in the photo separately.
-      </div>
-    </div>
-
-    <div class="panel">
-      <h2>Colours &amp; fonts <span style="color:var(--amber-dim)">(experimental)</span></h2>
-      <div id="gtable"><div class="hint">Load a template first.</div></div>
-      <datalist id="fontlist"><option value="Arial"><option value="Impact"><option value="Georgia"><option value="Courier New"><option value="Verdana"><option value="Trebuchet MS"><option value="Times New Roman"><option value="Comic Sans MS"><option value="Arial Black"><option value="monospace"></datalist>
-      <div class="hint">
-        The preview shows the real glyphs at their real positions (time = now, numbers = sample).
-        Digits/labels are pictures stored in the file, so colour, font and size are baked in.
-        <b>Height</b> rescales a set (widget W/H are rewritten to match). <b>Font</b> re-renders digits — pick a
-        curated font (bundled in this file, renders the same on any device) or type the name of a font installed
-        on this device instead. <b>Own set</b> gives a widget a private copy of the images (e.g. a different Minutes colour):
-        it appends images and grows the directory, shifting the tables behind it — the most invasive edit here, untested.
-        Hold <b>Shift</b> while dragging to disable snapping.
-      </div>
-    </div>
-
-    <div class="panel">
-      <h2>Widget library <span style="color:var(--amber-dim)">(experimental)</span></h2>
-      <button id="btn-add-battery-icon">+ Add Battery (icon style)</button>
-      <button id="btn-add-numeric">+ Add numeric widget (duplicate)</button>
-      <div class="hint">
-        Adds a new widget into a spare slot of the <b>currently loaded template</b> — the widget
-        table has room for up to 15, so this never restructures the rest of the file. <b>Battery
-        (icon style)</b> imports an 11-frame pictorial battery asset (embedded in this tool) for
-        templates that only have a numeric battery %. <b>Duplicate numeric</b> adds another
-        digit-readout widget reusing whatever font/colour this template's numbers already use —
-        handy for e.g. adding a Calories counter to a template that only has Steps and Heart Rate.
-        New widgets land at (10,10) — drag them into place and give them a name/colour like any other.
-      </div>
-    </div>
-
-    <div class="panel native-only">
-      <h2>Watch</h2>
-      <button id="btn-connect">Watch MAC / reconnect</button>
-    </div>
-    <div class="panel">
-      <h2>Export</h2>
-      <button class="primary web-only" id="btn-export-body">Download writes_body.txt</button>
-      <button class="native-only" id="btn-export-body-n">Save writes_body.txt</button>
-      <button id="btn-export-bin">Download patched.bin</button>
-      <div class="hint">
-        <b>writes_body.txt</b> is the file-transfer portion only — the Android app now supplies
-        the AT setup/close sequence itself, so this is the file to pick there. <b>patched.bin</b>
-        is the raw face file, for manual inspection or re-use with <code>bgproto.py</code>.
-      </div>
-    </div>
-
-    <div class="panel">
-      <h2>Log</h2>
-      <div class="log" id="log">Waiting for template...</div>
-    </div>
-  </div>
-</main>
-<div id="sendbar">
-  <div class="st">
-    <div id="watch-status">Not connected.</div>
-    <progress id="send-progress" value="0" max="1" style="display:none"></progress>
-  </div>
-  <button class="primary" id="btn-send">Send to watch</button>
 </div>
+
+<!-- hidden file pickers + fit state (kept for the editor logic) -->
+<input type="file" id="f-template" accept=".bin,application/octet-stream,*/*" hidden>
+<input type="file" id="f-photo" accept="image/*" hidden>
+<select id="sel-fit" hidden><option value="cover" selected>cover</option><option value="contain">contain</option><option value="stretch">stretch</option></select>
+
+<div class="scrim" id="scrim"></div>
+
+<div class="sheet" id="sheet-face" role="dialog" aria-label="Choose a face">
+  <div class="grab"></div><h3>Choose a face</h3>
+  <div id="face-list"></div>
+  <button type="button" class="lrow" id="btn-load-bin">
+    <span class="li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4M7 9l5-5 5 5M4 20h16"/></svg></span>
+    <span class="t">Open a .bin file<small>Load a face from this device.</small></span>
+  </button>
+  <button type="button" class="lrow" id="btn-keep-template" hidden>
+    <span class="li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h11l3 3v13H5z"/><path d="M8 4v5h7V4M8 20v-6h8v6"/></svg></span>
+    <span class="t">Keep in the app<small>Adds this face to the list above.</small></span>
+  </button>
+  <div class="filestat empty" id="stat-template" style="padding:4px 6px">No file loaded.</div>
+</div>
+
+<div class="sheet" id="sheet-menu" role="dialog" aria-label="Menu">
+  <div class="grab"></div><h3>FS1Canvas</h3>
+  <div class="native-only" hidden>
+    <div class="sec">Watch</div>
+    <button type="button" class="lrow" id="btn-open-watch">
+      <span class="li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7l10 10-5 5V2l5 5L7 17"/></svg></span>
+      <span class="t">Connect to your watch<small id="watch-sub">Choose the watch or change its address.</small></span>
+    </button>
+  </div>
+  <div class="sec">Save to Downloads</div>
+  <button type="button" class="lrow" id="btn-export-body">
+    <span class="li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M7 11l5 5 5-5M4 20h16"/></svg></span>
+    <span class="t">writes_body.txt<small>The transfer file.</small></span>
+  </button>
+  <button type="button" class="lrow" id="btn-export-bin">
+    <span class="li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M7 11l5 5 5-5M4 20h16"/></svg></span>
+    <span class="t">patched.bin<small>The raw face file.</small></span>
+  </button>
+  <div class="sec">Edit</div>
+  <button type="button" class="lrow" id="btn-reset-positions">
+    <span class="li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 1 0 3-6.2M4 4v4h4"/></svg></span>
+    <span class="t">Reset widget positions<small>Back to the template's own layout. Hidden widgets stay hidden.</small></span>
+  </button>
+  <div class="sec">Help</div>
+  <button type="button" class="lrow" id="btn-open-log">
+    <span class="li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 6h14M5 12h14M5 18h9"/></svg></span>
+    <span class="t">Activity log<small>What the app and the watch have been doing.</small></span>
+  </button>
+</div>
+
+<div class="sheet" id="sheet-watch" role="dialog" aria-label="Watch">
+  <div class="grab"></div><h3>Your watch</h3>
+  <div class="sec" style="margin-top:0">Address</div>
+  <input type="text" id="mac-input" placeholder="AA:BB:CC:DD:EE:FF" autocapitalize="characters" autocomplete="off" autocorrect="off" spellcheck="false" maxlength="17" enterkeyhint="go" style="width:100%;font-family:var(--mono);letter-spacing:.04em">
+  <div class="btnrow" style="margin-top:10px">
+    <button type="button" class="primary" id="btn-mac-connect">Connect</button>
+    <button type="button" id="btn-mac-disconnect">Disconnect</button>
+  </div>
+  <div class="sec">Paired with this phone</div>
+  <div id="paired-list"></div>
+  <button type="button" class="lrow" id="btn-show-paired">
+    <span class="li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5"/></svg></span>
+    <span class="t">Show paired devices<small id="paired-hint">Tap one to use its address.</small></span>
+  </button>
+</div>
+
+<div class="sheet" id="sheet-log" role="dialog" aria-label="Activity log">
+  <div class="grab"></div>
+  <div class="sheethead"><h3>Activity log</h3><button type="button" class="smallbtn" id="btn-copy-log">Copy</button></div>
+  <div class="log" id="log">Waiting for template...</div>
+</div>
+
+<div class="toast" id="toast" role="status"></div>
 
 <script>
 // ============================================================================
@@ -581,6 +499,7 @@ let CANVAS_SCALE = 2;       // 240x284 -> rendered size on screen; recomputed re
 // ============================================================================
 const logEl = document.getElementById('log');
 function log(msg, cls) {
+  if (cls === 'err' && typeof toast === 'function') toast(msg);
   const line = document.createElement('div');
   if (cls) line.className = cls;
   line.textContent = msg;
@@ -800,6 +719,7 @@ function parseHexLines(text) {
 async function loadTemplate(name, bytes) {
   try {
     templateBytes = bytes;
+    if (typeof setFaceName === 'function') setFaceName(name);
     log(`Loaded ${name}: ${templateBytes.length} bytes.`);
 
     const off = imageOffset(templateBytes);
@@ -824,12 +744,13 @@ async function loadTemplate(name, bytes) {
       log(`  ${w.label.padEnd(11)} x=${s.x} y=${s.y} w=${s.w} h=${s.h}`);
     }
 
-    setStat('stat-template', `${name} — ${templateBytes.length} bytes, image @ 0x${off.toString(16)}`, 'ok');
+    setStat('stat-template', `${name} · ${Math.round(templateBytes.length / 1024)} KB`, 'ok');
     buildWidgetDOM();
     updateWidgetTable();
     updateGroupTable();
     refreshAll();
     drawBackground();
+    if (typeof resetView === 'function') { resetView(); hintZoom(); }
     return true;
   } catch (err) {
     console.error(err);
@@ -843,10 +764,12 @@ document.getElementById('f-template').addEventListener('change', async (e) => {
   const file = e.target.files[0];
   if (!file) return;
   const buf = await readFileAsArrayBuffer(file);
+  e.target.value = '';
   const ok = await loadTemplate(file.name, new Uint8Array(buf));
+  if (ok) toast('Loaded ' + file.name);
   if (ok && window.Android) {
     pendingKeep = { name: file.name, bytes: new Uint8Array(buf) };
-    document.getElementById('btn-keep-template').style.display = 'block';
+    document.getElementById('btn-keep-template').hidden = false;
   }
 });
 let pendingKeep = null;
@@ -859,10 +782,11 @@ document.getElementById('f-photo').addEventListener('change', async (e) => {
   if (!file) return;
   try {
     photoImg = await readFileAsImage(file);
+    e.target.value = '';
     setStat('stat-photo', `${file.name} — ${photoImg.width}x${photoImg.height}`, 'ok');
     log(`Loaded photo ${file.name} (${photoImg.width}x${photoImg.height}).`);
     photoImg = limitPhotoSize(photoImg); resetPhotoView(); updatePhotoDock();
-    drawBackground();
+    drawBackground(); if (typeof setTab === 'function') setTab('photo');
   } catch (err) {
     setStat('stat-photo', 'Error loading image', 'err');
     log('Photo load failed: ' + err.message, 'err');
@@ -901,6 +825,7 @@ function drawBackground() {
 // Widget overlay DOM + dragging
 // ============================================================================
 const stage = document.getElementById('stage');
+const zoomer = document.getElementById('zoomer');
 const coordread = document.getElementById('coordread');
 
 // Stage width is fluid (CSS max-width:100%, aspect-ratio locked) so it fits phone screens too.
@@ -912,7 +837,7 @@ const coordread = document.getElementById('coordread');
 // measures. Using the bordered width here inflates CANVAS_SCALE slightly, which very visibly
 // clips/undersizes widgets right at the canvas edges (the "can't quite touch the border" gap).
 function syncCanvasScale(){ const w = stage.clientWidth; if (w) CANVAS_SCALE = w / IMG_W; }
-window.addEventListener('resize', () => { syncCanvasScale(); if (templateBytes) { buildWidgetDOM(); updateWidgetTable(); } });
+window.addEventListener('resize', () => { if (typeof fitStage === 'function') fitStage(); });
 
 function buildWidgetDOM() {
   syncCanvasScale();
@@ -931,24 +856,24 @@ function buildWidgetDOM() {
     el.innerHTML = ''; el.style.background = 'transparent';
     el.title = w.label + (s.visible ? '' : ' (hidden on watch)');
     if (w.key === selectedKey) el.classList.add('sel');
-    stage.appendChild(el);
+    zoomer.appendChild(el);
     attachDrag(el, w);
   }
   drawGlyphs();
 }
 
 function attachDrag(el, wdef) {
-  let dragging = false, startX = 0, startY = 0, origLeft = 0, origTop = 0;
+  let dragging = false, myG = 0, startX = 0, startY = 0, origLeft = 0, origTop = 0;
   el.addEventListener('pointerdown', (e) => {
-    dragging = true; selectKey(wdef.key);
+    dragging = true; myG = gestureId; selectKey(wdef.key);
     startX = e.clientX; startY = e.clientY;
     origLeft = parseFloat(el.style.left); origTop = parseFloat(el.style.top);
     el.setPointerCapture(e.pointerId);
     e.preventDefault();
   });
   el.addEventListener('pointermove', (e) => {
-    if (!dragging) return;
-    const dx = e.clientX - startX, dy = e.clientY - startY;
+    if (!dragging || myG !== gestureId || gesturing) return;
+    const dx = (e.clientX - startX) / viewZ, dy = (e.clientY - startY) / viewZ;
     let newLeft = origLeft + dx, newTop = origTop + dy;
     const s = widgetState[wdef.key];
     const vw = s.vw||s.w, vh = s.vh||s.h;
@@ -962,48 +887,17 @@ function attachDrag(el, wdef) {
     coordread.textContent = `${wdef.label}: x=${s.x} y=${s.y}`;
     updateWidgetTable(); updateFsDock();
   });
-  const end = (e) => { dragging = false; hideGuides(); try{el.releasePointerCapture(e.pointerId);}catch(_){} };
+  const end = (e) => { dragging = false; hideGuides(); coordread.textContent = ''; try{el.releasePointerCapture(e.pointerId);}catch(_){} };
   el.addEventListener('pointerup', end);
   el.addEventListener('pointercancel', end);
 }
 
 function updateWidgetTable() {
-  const tbody = document.querySelector('#wtable tbody');
-  tbody.innerHTML = '';
-  for (const w of WIDGET_DEFS) {
-    const s = widgetState[w.key];
-    if (!s) continue;
-    const tr = document.createElement('tr');
-    tr.innerHTML = `<td><input type="checkbox" class="vis-check" data-key="${w.key}" ${s.visible ? 'checked' : ''}></td>` +
-                    `<td>${w.icon} <input type="text" class="label-edit" data-key="${w.key}" value="${w.label}" style="width:120px">` +
-                    (w.confirmed ? ' <span class="hint" title="Confirmed by watching this widget on real hardware" style="color:#6c6">✓ confirmed</span>'
-                     : (w.confirmed===false ? ' <span class="hint" title="Worked out from position/icon, not individually confirmed on hardware — rename if wrong">? inferred</span>' : '')) +
-                    `</td>` +
-                    `<td class="num">${s.x}</td><td class="num">${s.y}</td>` +
-                    `<td class="num">0x${xOff(w).toString(16).toUpperCase()}</td>`;
-    tbody.appendChild(tr);
-  }
-  tbody.querySelectorAll('.label-edit').forEach(inp => {
-    inp.addEventListener('change', () => {
-      const w = WIDGET_DEFS.find(w => w.key === inp.dataset.key);
-      w.label = inp.value.trim() || w.label; delete w.confirmed;
-      updateGroupTable();
-    });
-  });
-  tbody.querySelectorAll('.vis-check').forEach(cb => {
-    cb.addEventListener('change', () => {
-      const key = cb.dataset.key;
-      const s = widgetState[key];
-      s.visible = cb.checked;
-      buildWidgetDOM();
-      const w = WIDGET_DEFS.find(w => w.key === key);
-      log(`${w.label}: ${s.visible ? 'shown' : 'hidden'} (position kept, moved off-canvas on export when hidden).`);
-    });
-  });
+  document.body.classList.toggle('loaded', !!templateBytes);
+  if (!templateBytes) return;
+  if (!WIDGET_DEFS.some(w => w.key === selectedKey)) selectedKey = WIDGET_DEFS.length ? WIDGET_DEFS[0].key : null;
+  renderChips(false); updateDock();
 }
-
-document.getElementById('btn-add-battery-icon').addEventListener('click', addBatteryIconWidget);
-document.getElementById('btn-add-numeric').addEventListener('click', addDuplicateNumericWidget);
 document.getElementById('btn-reset-positions').addEventListener('click', () => {
   if (!templateBytes) return;
   for (const w of WIDGET_DEFS) {
@@ -1286,7 +1180,7 @@ function drawGlyphs(){
 
 // ---- snapping + guides ----
 function snapPos(key,nx,ny,vw,vh){
-  const T=4, xs=[[0,0],[(IMG_W-vw)/2,1],[IMG_W-vw,2]], ys=[[0,0],[(IMG_H-vh)/2,1],[IMG_H-vh,2]];
+  const T=4/Math.max(1,viewZ), xs=[[0,0],[(IMG_W-vw)/2,1],[IMG_W-vw,2]], ys=[[0,0],[(IMG_H-vh)/2,1],[IMG_H-vh,2]];
   for(const o of WIDGET_DEFS){ if(o.key===key) continue; const t=widgetState[o.key]; if(!t||!t.visible) continue;
     xs.push([t.x,0],[t.x+(t.vw-vw)/2,1],[t.x+t.vw-vw,2]); ys.push([t.y,0],[t.y+(t.vh-vh)/2,1],[t.y+t.vh-vh,2]); }
   const best=(list,v)=>{ let b=null,bd=T+.01; for(const [c,tag] of list){ const dd=Math.abs(c-v); if(dd<bd){bd=dd;b=[c,tag];} } return b; };
@@ -1295,55 +1189,75 @@ function snapPos(key,nx,ny,vw,vh){
 }
 function showGuides(sn){
   for(const [id,val,v] of [['guide-v',sn&&sn.gx,true],['guide-h',sn&&sn.gy,false]]){
-    let el=document.getElementById(id); if(!el){ el=document.createElement('div'); el.id=id; el.className='guide '+(v?'gv':'gh'); stage.appendChild(el); }
+    let el=document.getElementById(id); if(!el){ el=document.createElement('div'); el.id=id; el.className='guide '+(v?'gv':'gh'); zoomer.appendChild(el); }
     el.style.display=val==null?'none':'block'; if(val!=null) el.style[v?'left':'top']=(val*CANVAS_SCALE)+'px'; }
 }
 function hideGuides(){ showGuides(null); }
 
-// ---- per-widget colour / font / size rows ----
+// ---- Style tab: colour / font / size for the selected widget ----
+const PALETTE = ['#FFFFFF', '#8E73F0', '#F28A3C', '#5EE6C8', '#FF5C8A', '#FFD84D', '#5CC8FF', '#9BE564'];
+function esc(s){ return String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
 function updateGroupTable(){
-  const box=document.getElementById('gtable'); box.innerHTML='';
-  if(!templateBytes) return;
-  WIDGET_DEFS.forEach(w=>{
-    const sid=wset[w.key]; if(!sid) return;
-    const s=sets[sid], g=groups[s.idx], own=sid.includes(':'), digits=groupTexts(g)!==null;
-    const shared=!own&&g.wkeys.length>1, canOwn=g.wkeys.length>1&&g.wkeys[0]!==w.key;
-    const row=document.createElement('div'); row.className='grow';
-    row.innerHTML=`<div><b>${w.label}</b> <span class="hint">${g.W}×${g.H} ×${g.imgs.length}${shared?' · shared with '+g.members.filter(m=>m!==w.label).join(', '):''}</span></div>
-      <input type="color" class="cc" value="${s.color}" data-set="${sid}">
-      ${digits?`<select class="cf-preset" hidden>${fontOptionsHTML()}</select>${fontStripHTML()}
-        <input type="text" class="cf-custom" list="fontlist" placeholder="...or type a font on this device" style="width:170px">`:''}
-      <label class="hint">height <input type="number" class="ch" min="6" max="200" value="${s.H}" style="width:56px"></label>
-      ${canOwn?`<label class="hint"><input type="checkbox" class="co" ${own?'checked':''}> own set</label>`:''}`;
-    box.appendChild(row);
-    row.querySelector('.cc').addEventListener('input',e=>{ s.color=e.target.value;
-      box.querySelectorAll(`.cc[data-set="${sid}"]`).forEach(o=>o.value=s.color); refreshAll(); });
-    const cfPreset=row.querySelector('.cf-preset'), cfCustom=row.querySelector('.cf-custom');
-    if(cfPreset){
-      const known=CURATED_FONTS.includes(s.font);
-      cfPreset.value = known ? s.font : '';
-      cfCustom.value = known ? '' : s.font;
-      // After setting s.font, redraw immediately (covers the common case where the font is
-      // already loaded) AND once more after document.fonts confirms it's actually ready (covers
-      // the first-ever use of a given font, where the immediate redraw can silently fall back to
-      // the default font - see the preload note above). Without this second redraw, the new font
-      // only visibly applies once something else (e.g. the height field) happens to redraw again.
-      const applyFont = () => { refreshAll();
-        if (document.fonts && document.fonts.load) document.fonts.load(`700 ${s.H}px "${s.font}"`).then(refreshAll).catch(()=>{}); };
-      cfPreset.addEventListener('change',()=>{ if(cfPreset.value){ cfCustom.value=''; s.font=cfPreset.value; } else { s.font=cfCustom.value.trim(); } applyFont(); });
-      cfCustom.addEventListener('change',()=>{ if(cfCustom.value.trim()){ cfPreset.value=''; s.font=cfCustom.value.trim(); } else { s.font=cfPreset.value; } applyFont(); });
-      const chips=[...row.querySelectorAll('.fchip')];
-      const mark=()=>chips.forEach(c=>c.classList.toggle('on', c.dataset.f===(CURATED_FONTS.includes(s.font)?s.font:'')));
-      chips.forEach(c=>c.addEventListener('click',()=>{ cfPreset.value=c.dataset.f; cfPreset.dispatchEvent(new Event('change')); mark(); }));
-      cfCustom.addEventListener('change',mark); mark();
-      const on=row.querySelector('.fchip.on'); if(on) setTimeout(()=>{ const st=on.parentElement; st.scrollLeft=on.offsetLeft-st.clientWidth/2+on.offsetWidth/2; },0);
-    }
-    row.querySelector('.ch').addEventListener('change',e=>{ s.H=Math.max(6,Math.min(200,+e.target.value||g.H)); updateGroupTable(); refreshAll(); });
-    const co=row.querySelector('.co'); if(co) co.addEventListener('change',()=>{
-      if(co.checked){ const nid=g.idx+':'+w.key; sets[nid]={...s}; wset[w.key]=nid; }
-      else { delete sets[sid]; wset[w.key]=String(g.idx); }
-      updateGroupTable(); refreshAll(); });
-  });
+  const box = document.getElementById('gtable'), hbox = document.getElementById('hbox'); box.innerHTML = ''; hbox.innerHTML = '';
+  if (!templateBytes) { box.innerHTML = '<div class="note">Pick a face first.</div>'; return; }
+  const w = WIDGET_DEFS.find(d => d.key === selectedKey);
+  if (!w) { box.innerHTML = '<div class="note">Tap a widget on the preview to style it.</div>'; return; }
+  const sid = wset[w.key];
+  if (!sid) { box.innerHTML = `<div class="note"><b>${esc(w.label)}</b> is drawn by the watch itself, so there is no colour or font to change here.</div>`; return; }
+  const s = sets[sid], g = groups[s.idx], own = sid.includes(':'), digits = groupTexts(g) !== null;
+  const shared = !own && g.wkeys.length > 1, canOwn = g.wkeys.length > 1 && g.wkeys[0] !== w.key;
+  const others = g.members.filter(m => m !== w.label).join(', ');
+  const row = document.createElement('div');
+  row.innerHTML = `
+    <div class="srow"><div class="dots" role="group" aria-label="Colour">
+      ${PALETTE.map(c => `<button type="button" class="dot" data-c="${c}" style="background:${c}" aria-label="${c}"></button>`).join('')}
+      <input type="color" class="cc" value="${s.color}" data-set="${sid}" aria-label="Custom colour"></div></div>
+    ${digits ? `<div class="srow">
+      <select class="cf-preset" hidden>${fontOptionsHTML()}</select>${fontStripHTML()}
+      </div>`
+      : `<div class="note">This one is a picture set, so only colour and size apply.</div>`}
+    ${digits ? `<details class="dev"><summary>Use a font installed on this phone</summary>
+        <input type="text" class="cf-custom" list="fontlist" placeholder="Font name" enterkeyhint="done"></details>` : ''}
+    ${canOwn ? `<label class="sw"><span>Separate copy<small>Off: changes also apply to ${esc(others || 'the others')}.</small></span><input type="checkbox" class="co" ${own ? 'checked' : ''}></label>`
+      : (shared ? `<div class="note">These changes also apply to ${esc(others)}.</div>` : '')}`;
+  hbox.innerHTML = `<div class="step" aria-label="Height"><button type="button" class="hm" aria-label="Smaller">−</button>
+        <input type="number" class="ch" inputmode="numeric" min="6" max="200" value="${s.H}" aria-label="Height">
+        <button type="button" class="hp" aria-label="Larger">+</button></div>`;
+  box.appendChild(row);
+
+  const cc = row.querySelector('.cc'), dots = [...row.querySelectorAll('.dot')];
+  const markDots = () => dots.forEach(d => d.classList.toggle('on', d.dataset.c.toLowerCase() === s.color.toLowerCase()));
+  cc.addEventListener('input', e => { s.color = e.target.value; markDots(); refreshAll(); });
+  dots.forEach(d => d.addEventListener('click', () => { cc.value = d.dataset.c; cc.dispatchEvent(new Event('input')); }));
+  markDots();
+
+  const cfPreset = row.querySelector('.cf-preset'), cfCustom = row.querySelector('.cf-custom');
+  if (cfPreset) {
+    const known = CURATED_FONTS.includes(s.font);
+    cfPreset.value = known ? s.font : ''; cfCustom.value = known ? '' : s.font;
+    if (!known && s.font) row.querySelector('details.dev').open = true;
+    // Redraw now, and again once the browser confirms the font is loaded (first use can fall back silently).
+    const applyFont = () => { refreshAll();
+      if (document.fonts && document.fonts.load) document.fonts.load(`700 ${s.H}px "${s.font}"`).then(refreshAll).catch(() => {}); };
+    cfPreset.addEventListener('change', () => { if (cfPreset.value) { cfCustom.value = ''; s.font = cfPreset.value; } else { s.font = cfCustom.value.trim(); } applyFont(); });
+    cfCustom.addEventListener('change', () => { if (cfCustom.value.trim()) { cfPreset.value = ''; s.font = cfCustom.value.trim(); } else { s.font = cfPreset.value; } applyFont(); });
+    const chips = [...row.querySelectorAll('.fchip')];
+    const mark = () => chips.forEach(c => c.classList.toggle('on', c.dataset.f === (CURATED_FONTS.includes(s.font) ? s.font : '')));
+    chips.forEach(c => c.addEventListener('click', () => { cfPreset.value = c.dataset.f; cfPreset.dispatchEvent(new Event('change')); mark(); }));
+    cfCustom.addEventListener('change', mark); mark();
+    const on = row.querySelector('.fchip.on');
+    if (on) setTimeout(() => { const st = on.parentElement; st.scrollLeft = on.offsetLeft - st.clientWidth / 2 + on.offsetWidth / 2; }, 0);
+  }
+  const ch = hbox.querySelector('.ch');
+  ch.addEventListener('change', e => { s.H = Math.max(6, Math.min(200, +e.target.value || g.H)); updateGroupTable(); refreshAll(); });
+  hbox.querySelector('.hm').addEventListener('click', () => { ch.value = (+ch.value || s.H) - 1; ch.dispatchEvent(new Event('change')); });
+  hbox.querySelector('.hp').addEventListener('click', () => { ch.value = (+ch.value || s.H) + 1; ch.dispatchEvent(new Event('change')); });
+  [ch, cfCustom].forEach(inp => inp && inp.addEventListener('keydown', e => { if (e.key === 'Enter') inp.blur(); }));
+  const co = row.querySelector('.co');
+  if (co) co.addEventListener('change', () => {
+    if (co.checked) { const nid = g.idx + ':' + w.key; sets[nid] = {...s}; wset[w.key] = nid; }
+    else { delete sets[sid]; wset[w.key] = String(g.idx); }
+    updateGroupTable(); refreshAll(); });
 }
 
 
@@ -1494,66 +1408,267 @@ document.getElementById('btn-export-body').addEventListener('click', () => {
 });
 
 // ============================================================================
-// Fullscreen editor: big preview, widget chips, nudge pad
+// App shell: selection, zoom, tabs, sheets, toast, stage fitting
 // ============================================================================
-let selectedKey = null, fsActive = false, nudgeStep = 1;
+const $ = id => document.getElementById(id);
+let selectedKey = null, curTab = 'style', openSheetId = null;
+
+function toast(m) {
+  const t = $('toast'); t.textContent = m;
+  // never cover what the person is working on: top while a sheet is open, otherwise just above the tools
+  if (openSheetId) { t.style.top = 'calc(66px + env(safe-area-inset-top,0px))'; t.style.bottom = 'auto'; }
+  else { const d = document.querySelector('.dock'); t.style.top = 'auto'; t.style.bottom = (window.innerHeight - d.getBoundingClientRect().top + 10) + 'px'; }
+  t.classList.add('on');
+  clearTimeout(toast._t); toast._t = setTimeout(() => t.classList.remove('on'), 2800);
+}
+function buzz() { try { navigator.vibrate && navigator.vibrate(6); } catch (_) {} }
+
 function selectKey(k) {
-  selectedKey = k;
+  const changed = k !== selectedKey; selectedKey = k;
   document.querySelectorAll('.widget').forEach(e => e.classList.toggle('sel', e.dataset.key === k));
-  updateFsDock();
+  renderChips(changed); updateDock();
+  if (changed) { buzz(); updateGroupTable(); }
 }
-function buildFsChips() {
-  const box = document.getElementById('fs-chips'); box.innerHTML = '';
-  WIDGET_DEFS.forEach(w => {
-    const b = document.createElement('button'); b.type = 'button'; b.textContent = w.label; b.dataset.key = w.key;
-    b.addEventListener('click', () => selectKey(w.key)); box.appendChild(b);
+function renderChips(scroll) {
+  const box = $('wchips'), sig = WIDGET_DEFS.map(w => w.key + ':' + w.label).join('|');
+  if (box.dataset.sig !== sig) {
+    box.innerHTML = '';
+    WIDGET_DEFS.forEach(w => {
+      const b = document.createElement('button'); b.type = 'button'; b.className = 'wchip'; b.dataset.key = w.key; b.textContent = w.label;
+      b.addEventListener('click', () => { selectKey(w.key); if (viewZ > 1.01) centerOn(w.key); }); box.appendChild(b);
+    });
+    box.dataset.sig = sig;
+  }
+  box.querySelectorAll('.wchip').forEach(b => {
+    const s = widgetState[b.dataset.key];
+    b.classList.toggle('on', b.dataset.key === selectedKey); b.classList.toggle('off', !!s && !s.visible);
   });
+  const on = box.querySelector('.wchip.on');
+  if (scroll && on) box.scrollTo({ left: on.offsetLeft - box.clientWidth / 2 + on.offsetWidth / 2, behavior: 'smooth' });
 }
-function updateFsDock() {
-  if (!fsActive) return;
-  const box = document.getElementById('fs-chips');
-  if (box.children.length !== WIDGET_DEFS.length) buildFsChips();
-  box.querySelectorAll('button').forEach(b => b.classList.toggle('on', b.dataset.key === selectedKey));
+function updateDock() {
   const w = WIDGET_DEFS.find(d => d.key === selectedKey), s = w && widgetState[w.key];
-  document.getElementById('fs-readout').textContent = s ? `${w.label}\nx=${s.x}  y=${s.y}` : 'Tap a widget to select it';
-  document.getElementById('fs-eye').textContent = s && !s.visible ? 'Show on watch' : 'Hide on watch';
-  document.getElementById('fs-step').textContent = nudgeStep + 'px';
-  document.querySelectorAll('#fs-pad button, #fs-eye').forEach(b => { if (b.id !== 'fs-step') b.disabled = !s; });
+  const ne = $('name-edit'); if (document.activeElement !== ne) ne.value = w ? w.label : '';
+  ne.disabled = !w;
+  $('fs-readout').textContent = s ? `x ${s.x} · y ${s.y}` : '—';
+  const vb = $('vis-btn'); vb.disabled = !s; vb.classList.toggle('off', !!s && !s.visible);
+  vb.setAttribute('aria-pressed', s && s.visible ? 'true' : 'false'); $('fs-home').disabled = !s;
 }
-function moveSelected(dx, dy) {
-  const s = widgetState[selectedKey]; if (!s) return;
+function updateFsDock() { updateDock(); }
+
+$('fs-home').addEventListener('click', () => {
+  const w = WIDGET_DEFS.find(d => d.key === selectedKey), s = w && widgetState[w.key]; if (!s) return;
+  s.x = readU16LE(templateBytes, xOff(w)); s.y = readU16LE(templateBytes, yOff(w)); refreshAll();
+});
+$('vis-btn').addEventListener('click', () => {
+  const s = widgetState[selectedKey], w = WIDGET_DEFS.find(d => d.key === selectedKey); if (!s) return;
+  s.visible = !s.visible; buildWidgetDOM(); renderChips(false); updateDock();
+  log(`${w.label}: ${s.visible ? 'shown' : 'hidden'} (position kept, moved off-canvas on export when hidden).`);
+});
+$('name-edit').addEventListener('change', e => {
+  const w = WIDGET_DEFS.find(d => d.key === selectedKey); if (!w) return;
+  w.label = e.target.value.trim() || w.label; delete w.confirmed; e.target.value = w.label;
+  renderChips(false); updateGroupTable();
+});
+$('name-edit').addEventListener('keydown', e => { if (e.key === 'Enter') e.target.blur(); });
+
+// ---- zoom the preview for fine placement (pinch, double-tap, wheel) ----
+let viewZ = 1, viewX = 0, viewY = 0, gestureId = 0;
+const VZ_MAX = 8;
+function applyView() {
+  const W = stage.clientWidth, H = stage.clientHeight;
+  viewZ = Math.max(1, Math.min(VZ_MAX, viewZ));
+  viewX = Math.min(0, Math.max(W * (1 - viewZ), viewX)); viewY = Math.min(0, Math.max(H * (1 - viewZ), viewY));
+  zoomer.style.transform = `translate(${viewX}px,${viewY}px) scale(${viewZ})`;
+  zoomer.style.setProperty('--iz', (1 / viewZ).toFixed(4));
+  const zc = $('zoom-chip'); zc.hidden = viewZ < 1.01; zc.textContent = viewZ.toFixed(1) + '×  ·  Reset';
+}
+function centerOn(key) {
+  const s = widgetState[key]; if (!s) return;
   const vw = s.vw || s.w, vh = s.vh || s.h;
-  s.x = Math.max(0, Math.min(IMG_W - vw, s.x + dx)); s.y = Math.max(0, Math.min(IMG_H - vh, s.y + dy));
-  const el = document.getElementById('w-' + selectedKey);
-  if (el) { el.style.left = (s.x * CANVAS_SCALE) + 'px'; el.style.top = (s.y * CANVAS_SCALE) + 'px'; }
-  drawGlyphs(); updateWidgetTable(); updateFsDock();
+  viewX = stage.clientWidth / 2 - (s.x + vw / 2) * CANVAS_SCALE * viewZ;
+  viewY = stage.clientHeight / 2 - (s.y + vh / 2) * CANVAS_SCALE * viewZ; applyView();
 }
-function setFs(on) {
-  if (on && !templateBytes) { log('Load a template first.', 'warn'); return; }
-  fsActive = on; if (!on) setPhotoMode(false);
-  document.querySelector('.stage-wrap').classList.toggle('fsmode-on', on);
-  document.body.classList.toggle('fsmode', on);
-  if (window.Android && window.Android.setImmersive) window.Android.setImmersive(on);
-  if (on) { if (!selectedKey && WIDGET_DEFS.length) selectedKey = WIDGET_DEFS[0].key; buildFsChips(); }
-  const relayout = () => { if (templateBytes) { buildWidgetDOM(); } updateFsDock(); };
-  requestAnimationFrame(() => requestAnimationFrame(relayout));
-  setTimeout(relayout, 350);   // again after the system bars finish hiding/showing
-  if (!on) setTimeout(() => document.getElementById('stage').scrollIntoView({ block: 'center' }), 380);
+function hintZoom() {
+  try { if (localStorage.getItem('zoomHint')) return; localStorage.setItem('zoomHint', '1'); } catch (_) {}
+  setTimeout(() => toast('Tip: pinch or double-tap the preview to zoom for fine placement.'), 700);
 }
-document.getElementById('btn-fs').addEventListener('click', () => setFs(true));
-document.getElementById('fs-close').addEventListener('click', () => setFs(false));
-document.getElementById('fs-step').addEventListener('click', () => { nudgeStep = nudgeStep === 1 ? 5 : nudgeStep === 5 ? 10 : 1; updateFsDock(); });
-document.getElementById('fs-eye').addEventListener('click', () => {
-  const cb = document.querySelector('.vis-check[data-key="' + selectedKey + '"]'); if (cb) cb.click(); updateFsDock();
+function resetView() { viewZ = 1; viewX = 0; viewY = 0; gestureId++; applyView(); }
+function zoomView(cx, cy, factor) {
+  const nz = Math.max(1, Math.min(VZ_MAX, viewZ * factor)), k = nz / viewZ;
+  viewX = cx - (cx - viewX) * k; viewY = cy - (cy - viewY) * k; viewZ = nz; applyView();
+}
+function stageXY(e) { const r = stage.getBoundingClientRect(); return { x: e.clientX - r.left - stage.clientLeft, y: e.clientY - r.top - stage.clientTop }; }
+$('zoom-chip').addEventListener('click', resetView);
+
+const vptr = new Map(); let gesturing = false, panOnly = null, lastTap = null, tapStart = null;
+stage.addEventListener('pointerdown', e => {
+  if (photoModeOn()) return;
+  vptr.set(e.pointerId, stageXY(e));
+  if (vptr.size === 2) { gesturing = true; panOnly = null; gestureId++; }
+  else if (vptr.size === 1) {
+    gesturing = false;
+    panOnly = (!e.target.classList.contains('widget') && viewZ > 1) ? e.pointerId : null;
+    tapStart = { t: performance.now(), x: e.clientX, y: e.clientY, onWidget: e.target.classList.contains('widget') };
+    if (panOnly !== null) { try { stage.setPointerCapture(e.pointerId); } catch (_) {} }
+  }
 });
-document.querySelectorAll('#fs-pad [data-dx]').forEach(b => {
-  let t, iv; const go = () => moveSelected(+b.dataset.dx * nudgeStep, +b.dataset.dy * nudgeStep);
-  const stop = () => { clearTimeout(t); clearInterval(iv); };
-  b.addEventListener('pointerdown', e => { e.preventDefault(); go(); t = setTimeout(() => { iv = setInterval(go, 70); }, 380); });
-  ['pointerup', 'pointercancel', 'pointerleave'].forEach(ev => b.addEventListener(ev, stop));
+stage.addEventListener('pointermove', e => {
+  if (photoModeOn() || !vptr.has(e.pointerId)) return;
+  const p = stageXY(e), prev = vptr.get(e.pointerId); vptr.set(e.pointerId, p);
+  if (vptr.size >= 2) {
+    const ids = [...vptr.keys()].slice(0, 2); if (!ids.includes(e.pointerId)) return;
+    const other = vptr.get(ids[0] === e.pointerId ? ids[1] : ids[0]);
+    const oldD = Math.hypot(prev.x - other.x, prev.y - other.y), newD = Math.hypot(p.x - other.x, p.y - other.y);
+    const oldM = { x: (prev.x + other.x) / 2, y: (prev.y + other.y) / 2 }, newM = { x: (p.x + other.x) / 2, y: (p.y + other.y) / 2 };
+    viewX += newM.x - oldM.x; viewY += newM.y - oldM.y;
+    if (oldD > 4 && newD > 4) zoomView(newM.x, newM.y, newD / oldD); else applyView();
+  } else if (panOnly === e.pointerId) { viewX += p.x - prev.x; viewY += p.y - prev.y; applyView(); }
 });
+const endView = e => {
+  if (!vptr.has(e.pointerId)) return;
+  vptr.delete(e.pointerId);
+  if (vptr.size < 2) gesturing = false;
+  if (e.type === 'pointerup' && tapStart && vptr.size === 0) {   // double-tap toggles zoom
+    const now = performance.now(), moved = Math.hypot(e.clientX - tapStart.x, e.clientY - tapStart.y);
+    if (moved < 8 && now - tapStart.t < 300) {
+      if (lastTap && now - lastTap.t < 320 && Math.hypot(e.clientX - lastTap.x, e.clientY - lastTap.y) < 30) {
+        const p = stageXY(e); if (viewZ > 1.2) resetView(); else zoomView(p.x, p.y, 3.5);
+        lastTap = null;
+      } else lastTap = { t: now, x: e.clientX, y: e.clientY };
+    }
+  }
+  if (vptr.size === 0) panOnly = null;
+};
+stage.addEventListener('pointerup', endView); stage.addEventListener('pointercancel', endView);
+stage.addEventListener('wheel', e => {
+  if (photoModeOn()) return; e.preventDefault();
+  const p = stageXY(e); zoomView(p.x, p.y, e.deltaY < 0 ? 1.15 : 1 / 1.15);
+}, { passive: false });
+
+function setTab(t) {
+  curTab = t;
+  document.querySelectorAll('.tab').forEach(b => b.classList.toggle('on', b.dataset.tab === t));
+  document.querySelectorAll('.pane').forEach(p => p.classList.toggle('on', p.id === 'pane-' + t));
+  $('tools').dataset.tab = t;
+  if (t === 'photo') resetView();           // photo mode edits the picture at 1×
+  setPhotoMode(t === 'photo');
+  if (t === 'style') updateGroupTable();
+  const p = $('pane-' + t); if (p) p.scrollTop = 0;
+  if (document.activeElement && document.activeElement.blur) document.activeElement.blur();
+}
+document.querySelectorAll('.tab').forEach(b => b.addEventListener('click', () => { if (b.dataset.tab !== curTab) { buzz(); setTab(b.dataset.tab); } }));
+
+// bottom sheets
+function openSheet(id) { closeSheets(true); $(id).classList.add('on'); $('scrim').classList.add('on'); openSheetId = id;
+  if (id === 'sheet-log') { const l = $('log'); setTimeout(() => { l.scrollTop = l.scrollHeight; }, 60); } }
+function closeSheets(keepScrim) {
+  document.querySelectorAll('.sheet.on').forEach(s => s.classList.remove('on'));
+  if (!keepScrim) $('scrim').classList.remove('on'); openSheetId = null;
+}
+$('scrim').addEventListener('click', () => closeSheets());
+$('btn-menu').addEventListener('click', () => openSheet('sheet-menu'));
+$('face-chip').addEventListener('click', () => openSheet('sheet-face'));
+$('empty-btn').addEventListener('click', () => openSheet('sheet-face'));
+$('ttl').addEventListener('click', () => (window.Android ? openWatchSheet() : openSheet('sheet-log')));
+$('btn-open-log').addEventListener('click', () => openSheet('sheet-log'));
+$('btn-load-bin').addEventListener('click', () => $('f-template').click());
+$('btn-reset-positions').addEventListener('click', () => { closeSheets(); toast('Positions reset'); });
+$('btn-export-bin').addEventListener('click', () => closeSheets());
+$('btn-export-body').addEventListener('click', () => closeSheets());
+function setFaceName(n) { $('face-name').textContent = String(n).replace(/\.bin$/i, ''); }
+
+// Add tab
+function addAndSelect(fn) {
+  const before = WIDGET_DEFS.length; fn();
+  if (WIDGET_DEFS.length > before) { setTab('style'); selectKey(WIDGET_DEFS[WIDGET_DEFS.length - 1].key); toast('Widget added. Drag it into place.'); }
+}
+$('btn-add-battery-icon').addEventListener('click', () => addAndSelect(addBatteryIconWidget));
+$('btn-add-numeric').addEventListener('click', () => addAndSelect(addDuplicateNumericWidget));
+$('p-big').addEventListener('click', () => $('f-photo').click());
+
+// keep the preview as large as the free space allows
+function fitStage() {
+  const h = $('stage-holder'); if (!h || !h.clientWidth) return;
+  const cs = getComputedStyle(h), bw = 4;
+  const aw = h.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+  const ah = h.clientHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom);
+  let cw = Math.floor(Math.min(aw - 2 * bw, (ah - 2 * bw) * IMG_W / IMG_H)); cw = Math.max(100, cw);
+  const ch = Math.round(cw * IMG_H / IMG_W);
+  stage.style.width = (cw + 2 * bw) + 'px'; stage.style.height = (ch + 2 * bw) + 'px';
+  const old = CANVAS_SCALE; syncCanvasScale();
+  if (templateBytes && Math.abs(old - CANVAS_SCALE) > 0.001) buildWidgetDOM();
+  applyView();
+}
+if (window.ResizeObserver) new ResizeObserver(fitStage).observe($('stage-holder'));
+fitStage();
 
 
+// ---- keyboard: give the preview room back while typing, keep the field visible ----
+let maxVH = window.innerHeight, lastW = window.innerWidth;
+function checkKb() {
+  if (window.innerWidth !== lastW) { lastW = window.innerWidth; maxVH = window.innerHeight; }
+  maxVH = Math.max(maxVH, window.innerHeight);
+  const typing = /^(INPUT|TEXTAREA)$/.test((document.activeElement || {}).tagName || '');
+  document.body.classList.toggle('kb', typing && window.innerHeight < maxVH - 140);
+}
+window.addEventListener('resize', checkKb);
+document.addEventListener('focusin', ev => {
+  if (!ev.target.matches || !ev.target.matches('input[type=text],input[type=number]')) return;
+  setTimeout(() => { checkKb(); try { ev.target.scrollIntoView({ block: 'center', behavior: 'smooth' }); } catch (_) {} }, 320);
+});
+document.addEventListener('focusout', () => setTimeout(checkKb, 150));
+
+// ---- swipe a sheet down to dismiss ----
+document.querySelectorAll('.sheet .grab').forEach(g => {
+  const sh = g.closest('.sheet'); let sy = null, dy = 0;
+  g.addEventListener('pointerdown', ev => { sy = ev.clientY; dy = 0; sh.classList.add('drag'); try { g.setPointerCapture(ev.pointerId); } catch (_) {} });
+  g.addEventListener('pointermove', ev => { if (sy === null) return; dy = Math.max(0, ev.clientY - sy); sh.style.transform = `translateY(${dy}px)`; });
+  const up = () => { if (sy === null) return; sh.classList.remove('drag'); sh.style.transform = ''; if (dy > 90) closeSheets(); sy = null; };
+  g.addEventListener('pointerup', up); g.addEventListener('pointercancel', up);
+});
+
+// ---- activity log: copy ----
+$('btn-copy-log').addEventListener('click', async () => {
+  const t = $('log').innerText;
+  try { await navigator.clipboard.writeText(t); toast('Log copied'); }
+  catch (_) {
+    const ta = document.createElement('textarea'); ta.value = t; document.body.appendChild(ta); ta.select();
+    try { document.execCommand('copy'); toast('Log copied'); } catch (__) { toast('Could not copy the log.'); }
+    ta.remove();
+  }
+});
+
+// ---- photo: remove ----
+$('p-remove').addEventListener('click', () => {
+  photoImg = null; setStat('stat-photo', '', 'empty'); resetPhotoView(); updatePhotoDock(); drawBackground(); toast('Photo removed');
+});
+
+// ---- watch sheet (Android app only) ----
+function openWatchSheet() {
+  if (window.Android) { try { $('mac-input').value = window.Android.getMac(); } catch (_) {} }
+  openSheet('sheet-watch');
+}
+function renderPaired(list) {
+  const box = $('paired-list'); box.innerHTML = '';
+  list.forEach(d => {
+    const r = document.createElement('button'); r.type = 'button'; r.className = 'lrow pair';
+    r.innerHTML = `<span class="li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3" width="12" height="18" rx="4"/></svg></span><span class="t">${esc(d.name || 'Unnamed device')}<small>${esc(d.address)}</small></span>`;
+    r.addEventListener('click', () => { $('mac-input').value = d.address; [...box.children].forEach(x => x.classList.toggle('on', x === r)); });
+    box.appendChild(r);
+  });
+  $('paired-hint').textContent = list.length ? 'Tap one to use its address.' : 'Nothing paired yet. Pair the watch in Android Bluetooth settings, or type its address above.';
+}
+$('btn-open-watch').addEventListener('click', openWatchSheet);
+$('btn-show-paired').addEventListener('click', () => { if (window.Android) window.Android.requestPairedDevices(); });
+$('mac-input').addEventListener('input', ev => {
+  const raw = ev.target.value.toUpperCase().replace(/[^0-9A-F]/g, '').slice(0, 12);
+  ev.target.value = (raw.match(/.{1,2}/g) || []).join(':');
+});
+function connectFromSheet() { const v = $('mac-input').value.trim(); if (window.Android) window.Android.connectWatchTo(v); closeSheets(); }
+$('btn-mac-connect').addEventListener('click', connectFromSheet);
+$('mac-input').addEventListener('keydown', ev => { if (ev.key === 'Enter') connectFromSheet(); });
+$('btn-mac-disconnect').addEventListener('click', () => { if (window.Android) window.Android.disconnectWatch(); closeSheets(); });
 // ============================================================================
 // Fullscreen "Photo" mode: pan / pinch-zoom / rotate / flip the picture under the widgets
 // ============================================================================
@@ -1580,16 +1695,13 @@ function updatePhotoDock() {
   ['z-minus', 'z-plus', 'z-range', 'p-rotl', 'p-rotr', 'p-flip', 'p-reset'].forEach(id => q(id).disabled = !has);
   document.querySelectorAll('#fit-chips button').forEach(b => b.disabled = !has);
   q('p-flip').classList.toggle('on', photoView.flip);
-  q('p-hint').textContent = has ? 'Drag to move · pinch to zoom · thirds grid shown' : 'No photo yet — tap “Photo…” to pick one';
+  q('pdock').classList.toggle('nophoto', !has);
+  q('p-hint').textContent = has ? 'Drag to move · pinch to zoom' : 'Pick a photo to use as the background.';
 }
 function setPhotoMode(on) {
   document.body.classList.toggle('photo-on', on);
-  document.getElementById('seg-p').classList.toggle('on', on);
-  document.getElementById('seg-w').classList.toggle('on', !on);
   updatePhotoDock();
 }
-document.getElementById('seg-w').addEventListener('click', () => setPhotoMode(false));
-document.getElementById('seg-p').addEventListener('click', () => setPhotoMode(true));
 
 const ptrs = new Map(); let lastDist = 0, lastMid = null;
 function stagePt(e) {
@@ -1647,54 +1759,99 @@ function b64ToBytes(b64) {
 
 window.fs1 = {
   onStatus(state, text) {
-    const el = document.getElementById('watch-status');
-    el.textContent = text;
+    const el = $('watch-status'); el.textContent = text;
     el.className = state === 'ready' || state === 'done' ? 'ok' : state === 'error' ? 'err' : 'busy';
-    const bar = document.getElementById('send-progress');
-    if (state !== 'sending') bar.style.display = state === 'done' ? 'block' : 'none';
+    const bar = $('send-progress');
+    bar.classList.toggle('on', state === 'sending' || state === 'done');
+    clearTimeout(fs1._fade); if (state === 'done') fs1._fade = setTimeout(() => bar.classList.remove('on'), 3500);
+    const btn = $('btn-send'), busy = state === 'sending' || state === 'connecting';
+    btn.disabled = busy; btn.textContent = state === 'sending' ? 'Sending' : state === 'connecting' ? 'Connecting' : 'Send';
+    if (state === 'error') toast(text);
   },
-  onProgress(done, total) {
-    const bar = document.getElementById('send-progress');
-    bar.style.display = 'block'; bar.max = total; bar.value = done;
-  },
+  onProgress(done, total) { const bar = $('send-progress'); bar.classList.add('on'); bar.max = total; bar.value = done; },
   onLog(msg, cls) { log(msg, cls || undefined); },
-  handleBack() { if (fsActive) { setFs(false); return true; } return false; },
+  onPaired(json) { try { renderPaired(JSON.parse(json)); } catch (_) {} },
+  handleBack() {
+    if (openSheetId) { closeSheets(); return true; }
+    if (viewZ > 1.01) { resetView(); return true; }
+    if (curTab !== 'style') { setTab('style'); return true; }
+    return false;
+  },
 };
 
 async function initNative() {
   document.body.classList.add('native');
-  const sel = document.getElementById('sel-template');
-  let list = [];
-  try { list = JSON.parse(window.Android.listTemplates()); } catch (e) { log('Could not list templates: ' + e.message, 'err'); }
-  for (const t of list) {
-    const o = document.createElement('option');
-    o.value = t.name; o.textContent = t.name.replace(/\.bin$/i, '') + (t.user ? ' (yours)' : '');
-    sel.appendChild(o);
+  document.querySelectorAll('.native-only').forEach(e => e.hidden = false);
+  const box = $('face-list');
+  let faces = [], currentFace = null;
+  function loadList() {
+    try { faces = JSON.parse(window.Android.listTemplates()); } catch (e) { faces = []; log('Could not list templates: ' + e.message, 'err'); }
+  }
+  const FACE_ICON = '<span class="li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3" width="12" height="18" rx="4"/></svg></span>';
+  function renderFaces() {
+    box.innerHTML = '';
+    faces.forEach(t => {
+      const on = t.name === currentFace, r = document.createElement('div');
+      r.className = 'lrow frow' + (on ? ' on' : ''); r.dataset.name = t.name;
+      const main = document.createElement('button'); main.type = 'button'; main.className = 'fmain';
+      main.innerHTML = FACE_ICON + `<span class="t">${esc(t.name.replace(/\.bin$/i, ''))}${t.user ? '<span class="badge">yours</span>' : ''}</span><span class="tick">${on ? '✓' : ''}</span>`;
+      main.addEventListener('click', () => pick(t.name)); r.appendChild(main);
+      if (t.user) {
+        const x = document.createElement('button'); x.type = 'button'; x.className = 'rowx'; x.textContent = '×';
+        x.setAttribute('aria-label', 'Remove ' + t.name); x.addEventListener('click', () => askRemove(r, t)); r.appendChild(x);
+      }
+      box.appendChild(r);
+    });
+  }
+  function askRemove(r, t) {
+    r.className = 'lrow frow confirm';
+    r.innerHTML = `<span class="t" style="flex:1">Remove ${esc(t.name.replace(/\.bin$/i, ''))}?</span>`;
+    const keep = document.createElement('button'), del = document.createElement('button');
+    keep.type = del.type = 'button'; keep.className = 'smallbtn'; keep.textContent = 'Keep';
+    del.className = 'smallbtn danger'; del.textContent = 'Remove';
+    keep.addEventListener('click', renderFaces);
+    del.addEventListener('click', () => {
+      if (!window.Android.deleteTemplate(t.name)) { toast('Could not remove that face.'); return; }
+      try { if (localStorage.getItem('lastTemplate') === t.name) localStorage.removeItem('lastTemplate'); } catch (_) {}
+      if (currentFace === t.name) currentFace = null;
+      loadList(); renderFaces(); toast('Removed');
+    });
+    r.append(keep, del);
   }
   async function pick(name) {
     const b64 = window.Android.getTemplate(name);
     if (!b64) { log('Template not found: ' + name, 'err'); return; }
     try { localStorage.setItem('lastTemplate', name); } catch (e) {}
-    document.getElementById('btn-keep-template').style.display = 'none';
-    await loadTemplate(name, b64ToBytes(b64));
+    $('btn-keep-template').hidden = true; pendingKeep = null;
+    const ok = await loadTemplate(name, b64ToBytes(b64));
+    if (ok) { currentFace = name; renderFaces(); resetView(); closeSheets(); }
   }
-  sel.addEventListener('change', () => pick(sel.value));
-  if (list.length) {
+  loadList(); renderFaces();
+  if (faces.length) {
     let last = null; try { last = localStorage.getItem('lastTemplate'); } catch (e) {}
-    sel.value = list.some(t => t.name === last) ? last : list[0].name;
-    await pick(sel.value);
+    const first = faces.some(t => t.name === last) ? last : (faces.find(t => t.name === 'default-stripe.bin') || faces[0]).name;
+    await pick(first);
+    closeSheets();
   } else {
-    log('No bundled templates found — load a .bin from the device.', 'warn');
+    log('No bundled templates found — open a .bin from the device.', 'warn');
   }
-
-  document.getElementById('btn-keep-template').addEventListener('click', () => {
+  $('f-template').addEventListener('change', () => { currentFace = null; renderFaces(); });
+  // A face opened from the device can be kept: saved inside the app and shown in the list straight away.
+  $('btn-keep-template').addEventListener('click', () => {
     if (!pendingKeep) return;
-    const ok = window.Android.saveTemplate(pendingKeep.name, bytesToB64(pendingKeep.bytes));
-    log(ok ? `Saved ${pendingKeep.name} in the app — it's now in the template list (restart the app to see it).` : 'Could not save template (use a plain file name ending in .bin).', ok ? 'ok' : 'err');
-    if (ok) document.getElementById('btn-keep-template').style.display = 'none';
+    let name = pendingKeep.name.replace(/[^A-Za-z0-9._ -]/g, '_').replace(/\.bin$/i, '').slice(0, 60) + '.bin';
+    if (faces.some(t => !t.user && t.name.toLowerCase() === name.toLowerCase())) {
+      toast('A built-in face already uses that name. Rename the file and try again.'); return;
+    }
+    const ok = window.Android.saveTemplate(name, bytesToB64(pendingKeep.bytes));
+    if (!ok) { log('Could not save ' + name + '.', 'err'); return; }
+    log(`Kept ${name} in the app.`, 'ok');
+    loadList(); currentFace = name; renderFaces();
+    try { localStorage.setItem('lastTemplate', name); } catch (e) {}
+    setFaceName(name); $('btn-keep-template').hidden = true; pendingKeep = null;
+    toast('Kept. It is in your list now.');
   });
-  document.getElementById('btn-connect').addEventListener('click', () => window.Android.connectWatch());
-  document.getElementById('btn-send').addEventListener('click', () => {
+  $('btn-send').addEventListener('click', () => {
     try {
       const patched = buildPatchedBin();
       const lines = buildWritesBodyLines(patched);
@@ -1704,22 +1861,16 @@ async function initNative() {
       log('Send failed: ' + err.message, 'err');
     }
   });
-  document.getElementById('btn-export-body-n').addEventListener('click', () => document.getElementById('btn-export-body').click());
   window.Android.pageReady();
 }
 
-document.querySelectorAll('.panel > h2').forEach(h => h.addEventListener('click', () => h.parentElement.classList.toggle('collapsed')));
-if (window.matchMedia('(max-width: 980px)').matches) {
-  document.querySelectorAll('.panel').forEach(p => {
-    const t = (p.querySelector(':scope > h2') || {}).textContent || '';
-    if (/^(Watch|Widget library|Export|Log)/.test(t)) p.classList.add('collapsed');
-  });
-}
-document.getElementById('watch-status').addEventListener('click', () => {
-  const lp = document.getElementById('log').closest('.panel'); lp.classList.remove('collapsed');
-  lp.scrollIntoView({ behavior: 'smooth', block: 'center' });
-});
 if (window.Android) initNative();
+else {
+  $('watch-status').textContent = 'Preview in browser';
+  $('btn-send').textContent = 'Save';
+  $('btn-send').addEventListener('click', () => $('btn-export-body').click());
+  $('face-chip').addEventListener('click', () => {});
+}
 </script>
 </body>
 </html>
